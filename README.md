@@ -9,7 +9,6 @@ The Motor Survey System is a web-based application developed using the .NET Fram
 - [Architecture](#architecture)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
