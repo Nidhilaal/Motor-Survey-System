@@ -1,0 +1,9 @@
+D:\MotorSurveySystem\BusinessLayer\bin\Release\BusinessLayer.dll
+D:\MotorSurveySystem\BusinessLayer\bin\Release\BusinessLayer.pdb
+D:\MotorSurveySystem\BusinessLayer\bin\Release\DataAccessLayer.dll
+D:\MotorSurveySystem\BusinessLayer\bin\Release\DataAccessLayer.pdb
+D:\MotorSurveySystem\BusinessLayer\obj\Release\BusinessLayer.csproj.AssemblyReference.cache
+D:\MotorSurveySystem\BusinessLayer\obj\Release\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\MotorSurveySystem\BusinessLayer\obj\Release\BusinessLayer.csproj.CopyComplete
+D:\MotorSurveySystem\BusinessLayer\obj\Release\BusinessLayer.dll
+D:\MotorSurveySystem\BusinessLayer\obj\Release\BusinessLayer.pdb

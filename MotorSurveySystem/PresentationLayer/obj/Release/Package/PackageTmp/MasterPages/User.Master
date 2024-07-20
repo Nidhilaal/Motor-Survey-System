@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="PresentationLayer.MasterPages.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Survey System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        function showSuccessMessage(pTitle, pMessgae) {
+            Swal.fire({
+                icon: 'success',
+                title: pTitle,
+                text: pMessgae,
+            });
+        }
+
+        function showErrorMessage(pTitle, pMessgae) {
+            Swal.fire({
+                icon: 'error',
+                title: pTitle,
+                text: pMessgae,
+            });
+        }
+        function showSuccessMessageRedirect(pTitle, pMessage, pPath) {
+            Swal.fire({
+                icon: 'success',
+                title: pTitle,
+                html: pMessage,
+            });
+            var delayInMilliseconds = 2000;
+            setTimeout(function () {
+                window.location.href = pPath;
+            }, delayInMilliseconds);
+        }
+        function showErrorMessageRedirect(pTitle, pMessage, pPath) {
+            Swal.fire({
+                icon: 'error',
+                title: pTitle,
+                html: pMessage,
+            });
+            var delayInMilliseconds = 2000;
+            setTimeout(function () {
+                window.location.href = pPath;
+            }, delayInMilliseconds);
+        }
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark p-3 " style="background-color: #10898d;">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="#">Survey</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto ">
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 active" aria-current="page" href="/User/Home.aspx">Home</a>
+                            </li>
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link mx-2 dropdown-toggle active" href="#" id="navbarDropdownMenuLinkMaster" role="button" data-bs-toggle="dropdown" aria-expanded="false">Master
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/User/CodesMaster/CodesMaster.aspx">Code Master</a></li>
+                                    <li><a class="dropdown-item" href="/User/ErrorCodesMaster/ErrorCodesMaster.aspx">Error Code Master</a></li>
+                                    <li><a class="dropdown-item" href="/User/UsersMaster/UsersMaster.aspx">User Master</a></li>
+<%--                                    <li><a class="dropdown-item" href="/User/ECMCode/EcmCodeListing.aspx">ECM Codes</a></li>--%>
+                                   
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link mx-2 dropdown-toggle active" href="#" id="navbarDropdownMenuLinkTransaction" role="button" data-bs-toggle="dropdown" aria-expanded="false">Transactions
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/User/MotorClaim/MotorClaim.aspx">Motor Claims</a></li>                                
+                                  <%--  <li><a class="dropdown-item" href="/User/ECMEmployee/EcmEmployeeListing.aspx">Employee Listing</a></li>       --%>
+                                     <li><a class="dropdown-item" href="/User/HistoryTable/History.aspx">Survey History</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+                            <li class="nav-item mx-2">
+
+                                <a class="nav-link text-light h5" href="/Login.aspx" role="button">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

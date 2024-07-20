@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SurveyDataSet" targetNamespace="http://tempuri.org/SurveyDataSet.xsd" xmlns:mstns="http://tempuri.org/SurveyDataSet.xsd" xmlns="http://tempuri.org/SurveyDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SurveyDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SurveyDataSet" msprop:Generator_UserDSName="SurveyDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SurveyHeader" msprop:Generator_TableClassName="SurveyHeaderDataTable" msprop:Generator_TableVarName="tableSurveyHeader" msprop:Generator_TablePropName="SurveyHeader" msprop:Generator_RowDeletingName="SurveyHeaderRowDeleting" msprop:Generator_RowChangingName="SurveyHeaderRowChanging" msprop:Generator_RowEvHandlerName="SurveyHeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="SurveyHeaderRowDeleted" msprop:Generator_UserTableName="SurveyHeader" msprop:Generator_RowChangedName="SurveyHeaderRowChanged" msprop:Generator_RowEvArgName="SurveyHeaderRowChangeEvent" msprop:Generator_RowClassName="SurveyHeaderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SUR_CLM_NO" msprop:Generator_ColumnVarNameInTable="columnSUR_CLM_NO" msprop:Generator_ColumnPropNameInRow="SUR_CLM_NO" msprop:Generator_ColumnPropNameInTable="SUR_CLM_NOColumn" msprop:Generator_UserColumnName="SUR_CLM_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SUR_NO" msprop:Generator_ColumnVarNameInTable="columnSUR_NO" msprop:Generator_ColumnPropNameInRow="SUR_NO" msprop:Generator_ColumnPropNameInTable="SUR_NOColumn" msprop:Generator_UserColumnName="SUR_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SUR_CHASSIS_NO" msprop:Generator_ColumnVarNameInTable="columnSUR_CHASSIS_NO" msprop:Generator_ColumnPropNameInRow="SUR_CHASSIS_NO" msprop:Generator_ColumnPropNameInTable="SUR_CHASSIS_NOColumn" msprop:Generator_UserColumnName="SUR_CHASSIS_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SUR_REGN_NO" msprop:Generator_ColumnVarNameInTable="columnSUR_REGN_NO" msprop:Generator_ColumnPropNameInRow="SUR_REGN_NO" msprop:Generator_ColumnPropNameInTable="SUR_REGN_NOColumn" msprop:Generator_UserColumnName="SUR_REGN_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SUR_ENGINE_NO" msprop:Generator_ColumnVarNameInTable="columnSUR_ENGINE_NO" msprop:Generator_ColumnPropNameInRow="SUR_ENGINE_NO" msprop:Generator_ColumnPropNameInTable="SUR_ENGINE_NOColumn" msprop:Generator_UserColumnName="SUR_ENGINE_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SUR_FC_AMT" msprop:Generator_ColumnVarNameInTable="columnSUR_FC_AMT" msprop:Generator_ColumnPropNameInRow="SUR_FC_AMT" msprop:Generator_ColumnPropNameInTable="SUR_FC_AMTColumn" msprop:Generator_UserColumnName="SUR_FC_AMT" type="xs:double" minOccurs="0" />
+              <xs:element name="SUR_LC_AMT" msprop:Generator_ColumnVarNameInTable="columnSUR_LC_AMT" msprop:Generator_ColumnPropNameInRow="SUR_LC_AMT" msprop:Generator_ColumnPropNameInTable="SUR_LC_AMTColumn" msprop:Generator_UserColumnName="SUR_LC_AMT" type="xs:double" minOccurs="0" />
+              <xs:element name="SUR_APPR_STS" msprop:Generator_ColumnVarNameInTable="columnSUR_APPR_STS" msprop:Generator_ColumnPropNameInRow="SUR_APPR_STS" msprop:Generator_ColumnPropNameInTable="SUR_APPR_STSColumn" msprop:Generator_UserColumnName="SUR_APPR_STS" type="xs:string" minOccurs="0" />
+              <xs:element name="SUR_APPR_DT" msprop:Generator_ColumnVarNameInTable="columnSUR_APPR_DT" msprop:Generator_ColumnPropNameInRow="SUR_APPR_DT" msprop:Generator_ColumnPropNameInTable="SUR_APPR_DTColumn" msprop:Generator_UserColumnName="SUR_APPR_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SUR_APPR_BY" msprop:Generator_ColumnVarNameInTable="columnSUR_APPR_BY" msprop:Generator_ColumnPropNameInRow="SUR_APPR_BY" msprop:Generator_ColumnPropNameInTable="SUR_APPR_BYColumn" msprop:Generator_UserColumnName="SUR_APPR_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="SUR_CURR" msprop:Generator_ColumnVarNameInTable="columnSUR_CURR" msprop:Generator_ColumnPropNameInRow="SUR_CURR" msprop:Generator_ColumnPropNameInTable="SUR_CURRColumn" msprop:Generator_UserColumnName="SUR_CURR" type="xs:string" minOccurs="0" />
+              <xs:element name="CLM_POL_NO" msprop:Generator_ColumnVarNameInTable="columnCLM_POL_NO" msprop:Generator_ColumnPropNameInRow="CLM_POL_NO" msprop:Generator_ColumnPropNameInTable="CLM_POL_NOColumn" msprop:Generator_UserColumnName="CLM_POL_NO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SurveyDetails" msprop:Generator_TableClassName="SurveyDetailsDataTable" msprop:Generator_TableVarName="tableSurveyDetails" msprop:Generator_TablePropName="SurveyDetails" msprop:Generator_RowDeletingName="SurveyDetailsRowDeleting" msprop:Generator_RowChangingName="SurveyDetailsRowChanging" msprop:Generator_RowEvHandlerName="SurveyDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="SurveyDetailsRowDeleted" msprop:Generator_UserTableName="SurveyDetails" msprop:Generator_RowChangedName="SurveyDetailsRowChanged" msprop:Generator_RowEvArgName="SurveyDetailsRowChangeEvent" msprop:Generator_RowClassName="SurveyDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SURD_ITEM_CODE" msprop:Generator_ColumnVarNameInTable="columnSURD_ITEM_CODE" msprop:Generator_ColumnPropNameInRow="SURD_ITEM_CODE" msprop:Generator_ColumnPropNameInTable="SURD_ITEM_CODEColumn" msprop:Generator_UserColumnName="SURD_ITEM_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="SURD_TYPE" msprop:Generator_ColumnVarNameInTable="columnSURD_TYPE" msprop:Generator_ColumnPropNameInRow="SURD_TYPE" msprop:Generator_ColumnPropNameInTable="SURD_TYPEColumn" msprop:Generator_UserColumnName="SURD_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="SURD_UNIT_PRICE" msprop:Generator_ColumnVarNameInTable="columnSURD_UNIT_PRICE" msprop:Generator_ColumnPropNameInRow="SURD_UNIT_PRICE" msprop:Generator_ColumnPropNameInTable="SURD_UNIT_PRICEColumn" msprop:Generator_UserColumnName="SURD_UNIT_PRICE" type="xs:double" minOccurs="0" />
+              <xs:element name="SURD_QUANTITY" msprop:Generator_ColumnVarNameInTable="columnSURD_QUANTITY" msprop:Generator_ColumnPropNameInRow="SURD_QUANTITY" msprop:Generator_ColumnPropNameInTable="SURD_QUANTITYColumn" msprop:Generator_UserColumnName="SURD_QUANTITY" type="xs:int" minOccurs="0" />
+              <xs:element name="SURD_FC_AMT" msprop:Generator_ColumnVarNameInTable="columnSURD_FC_AMT" msprop:Generator_ColumnPropNameInRow="SURD_FC_AMT" msprop:Generator_ColumnPropNameInTable="SURD_FC_AMTColumn" msprop:Generator_UserColumnName="SURD_FC_AMT" type="xs:double" minOccurs="0" />
+              <xs:element name="SURD_LC_AMT" msprop:Generator_ColumnVarNameInTable="columnSURD_LC_AMT" msprop:Generator_ColumnPropNameInRow="SURD_LC_AMT" msprop:Generator_ColumnPropNameInTable="SURD_LC_AMTColumn" msprop:Generator_UserColumnName="SURD_LC_AMT" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

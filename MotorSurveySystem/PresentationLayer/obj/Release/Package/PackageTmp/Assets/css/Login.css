@@ -1,0 +1,41 @@
+﻿svg {
+    font-family: 'Russo One', sans-serif;
+    position: absolute;
+}
+
+    svg text {
+        text-transform: uppercase;
+        animation: stroke 5s infinite alternate;
+        stroke-width: 0;
+        stroke: #365fa0;
+        font-size: 300%;
+    }
+
+@keyframes stroke {
+    0% {
+        fill: rgba(72,138,20,0);
+        stroke: white;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(72,138,20,0);
+        stroke: white;
+    }
+
+    80% {
+        fill: white;
+        stroke: white;
+        stroke-width: 2;
+    }
+
+    100% {
+        fill: white;
+        stroke: white;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}

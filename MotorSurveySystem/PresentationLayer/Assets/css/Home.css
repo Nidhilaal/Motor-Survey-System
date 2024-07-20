@@ -1,0 +1,36 @@
+﻿body {
+    background-image: url('../Images/home_back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center-content {
+    height: 100%;
+    margin-top: 15%;
+    margin-left: 15%;
+    animation: bounce 2s infinite;
+}
+
+    .center-content h1 {
+        animation: fadeIn 5s;
+    }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
