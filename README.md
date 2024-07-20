@@ -55,7 +55,7 @@ The application follows a multi-tier architecture to separate concerns and enhan
     ```
 
 2. **Setup the Database**:
-   - Run the SQL scripts located in the `database` folder to set up the Oracle database.
+   - Run the SQL scripts located in the `DbScripts` folder to set up the Oracle database.
 
 3. **Configure the Connection String**:
    - Update the connection string in the `web.config` file to point to your Oracle database instance.
@@ -95,4 +95,4 @@ Contributions are welcome! Please contact me to contribute to this project.
 
 ## Contact
 
-For any inquiries or issues, please contact [Nidhilaal](mailto:msnidhilal@16gmail.com).
+For any inquiries or issues, please contact [Nidhilal](mailto:msnidhilal@16gmail.com).
