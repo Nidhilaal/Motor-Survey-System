@@ -37,8 +37,8 @@ The Motor Survey System is designed to manage motor insurance claims efficiently
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/motor-survey-system.git
-    cd motor-survey-system/dotnet_framework
+    git clone https://github.com/Nidhilaal/motor-survey-system.git
+    cd motor-survey-system/dotnet-framework
     ```
 
 2. **Setup the Database**:
