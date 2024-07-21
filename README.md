@@ -12,6 +12,7 @@ Each implementation follows the same business logic and architecture but utilize
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Architecture](#architecture)
 - [Implementations](#implementations)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -34,15 +35,34 @@ The Motor Survey System is designed to manage motor insurance claims efficiently
   - Conduct surveys and submit reports.
   - Update the status of claims.
 
+## Architecture
+
+The system is built using the following technologies:
+
+### ASP.NET Framework
+- **Backend**: .NET Framework
+- **Frontend**: ASP.NET Web Forms
+- **Database**: Oracle Database
+- 
+### ASP.NET Core
+- **Backend**: .NET Core
+- **Frontend**: ASP.NET Razor Pages / MVC
+- **Database**: Oracle Database
+
+### Angular
+- **Frontend**: Angular
+- **Backend**: .NET Core
+- **Database**: Oracle Database
+ 
 ## Implementations
 
 ### [ASP.NET Framework](dotnet-framework/README.md)
 
-The ASP.NET Framework version uses the .NET Framework for the backend and Oracle Database.
+The ASP.NET Framework version uses the .NET Framework for the backend, ASP.NET Web Forms for the frontend, and Oracle Database.
 
 ### [ASP.NET Core](dotnet-core/README.md)
 
-The ASP.NET Core version uses the .NET Core framework for the backend and Oracle Database.
+The ASP.NET Core version uses the .NET Core framework for the backend, ASP.NET Razor Pages or MVC for the frontend, and Oracle Database.
 
 ### [Angular](angular/README.md)
 
