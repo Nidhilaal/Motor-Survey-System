@@ -6,7 +6,7 @@ This folder contains the ASP.NET Core implementation of the Motor Survey System.
 
 The Motor Survey System is designed to manage motor insurance claims efficiently. The system has two primary roles: the **Surveyor** and the **User**. Users initiate claims, surveyors conduct surveys and submit reports, and users or employees approve the surveys.
 
-## Technologies Used
+## Architecture
 
 - **Backend**: .NET Core 6.0
 - **Frontend**: ASP.NET Razor Pages / MVC
