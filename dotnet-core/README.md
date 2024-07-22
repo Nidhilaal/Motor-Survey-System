@@ -8,7 +8,7 @@ The Motor Survey System is designed to manage motor insurance claims efficiently
 
 ## Technologies Used
 
-- **Backend**: .NET Core
+- **Backend**: .NET Core 6.0
 - **Frontend**: ASP.NET Razor Pages / MVC
 - **Database**: Oracle Database
 
