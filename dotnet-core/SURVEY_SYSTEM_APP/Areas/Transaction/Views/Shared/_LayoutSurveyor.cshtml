@@ -1,0 +1,126 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Survey System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <link href="//cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript">
+        function showSuccessMessage(pTitle, pMessgae) {
+            Swal.fire({
+                icon: 'success',
+                title: pTitle,
+                text: pMessgae,
+            });
+        }
+
+        function showErrorMessage(pTitle, pMessgae) {
+            Swal.fire({
+                icon: 'error',
+                title: pTitle,
+                text: pMessgae,
+            });
+        }
+        function showSuccessMessageRedirect(pTitle, pMessage, pPath) {
+            Swal.fire({
+                icon: 'success',
+                title: pTitle,
+                html: pMessage,
+            });
+            var delayInMilliseconds = 2000;
+            setTimeout(function () {
+                window.location.href = pPath;
+            }, delayInMilliseconds);
+        }
+
+        function showErrorMessageRedirect(pTitle, pMessage, pPath) {
+            Swal.fire({
+                icon: 'error',
+                title: pTitle,
+                html: pMessage,
+            });
+            var delayInMilliseconds = 2000;
+            setTimeout(function () {
+                window.location.href = pPath;
+            }, delayInMilliseconds);
+        }
+
+    </script>
+    @if (IsSectionDefined("Style"))
+    {
+        @RenderSection("Style")
+    }
+    <style>
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar p-3 " style="background-color: #c9b375;">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">Survey</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link mx-2 active" aria-current="page" href="~/Transaction/Dashboard/Dashboard">Home</a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLinkMaster" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Surveyor
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="~/Transaction/Survey/PendingMotorClaimList">Pending Claims</a></li>
+                                <li><a class="dropdown-item" href="~/Transaction/Survey/SurveyList">Surveys</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link text-dark h5" href="/Login" role="button">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div>
+            @RenderBody()
+        </div>
+        @if (IsSectionDefined("Scripts"))
+        {
+            @RenderSection("Scripts")
+        }
+    </div>
+</body>
+</html>

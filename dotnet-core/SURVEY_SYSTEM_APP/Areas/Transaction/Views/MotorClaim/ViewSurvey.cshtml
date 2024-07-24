@@ -1,0 +1,248 @@
+﻿@using SURVEY_SYSTEM_APP.Areas.Transaction.Models;
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_LayoutUser";
+
+}
+@model MotorClmSurHdrModel
+
+
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div class="col-1" style="margin-left: 99.9%; margin-right: 2%">
+            <button id="btnBack" class="btn btn-dark" onclick="javascript:history.back(); return false;">Back</button>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <h4 style="font-weight: bold">SUMMARY</h4>
+        </div>
+    </div>
+</div>
+@if (TempData["Message1"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            Swal.fire(
+                '@TempData["Message1"]',
+                '@TempData["Message2"]',
+                '@TempData["Message3"]'
+            )
+        };
+
+    </script>
+}
+@using (Html.BeginForm("UpdateApprovalstatus", "MotorClaim", FormMethod.Post, new { id = "claimFormId" }))
+{
+    <div style="margin-right: 15%; margin-left: 20%; margin-top: 2%; margin-bottom: 3%">
+
+
+        <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom: 1%;">
+            <input type="hidden" id="surUid" name="motorClmSurHdr.SurUid" value="@Model?.motorClmSurHdr?.SurUid" />
+
+            <div class="col-sm-3">
+                <label for="lblClmPolNo" style="font-size: large;">Policy No: </label>
+            </div>
+            <div class="col-sm-3">
+                <span style="font-weight: bold;">@Model.motorClaim.ClmPolNo</span>
+                @Html.HiddenFor(model => model.motorClaim.ClmPolNo)
+            </div>
+            <div class="col-sm-3">
+                <label for="lblClmPolNo" style="font-size: large;">Claim No:</label>
+            </div>
+            <div class="col-sm-3">
+                <span style="font-weight: bold;">@Model.motorClmSurHdr.SurclmNo</span>
+                @Html.HiddenFor(model => model.motorClmSurHdr.SurclmNo)
+
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 1%; margin-bottom: 1%;">
+            <div class="col-sm-3">
+                <label for="lblClmPolNo" style="font-size: large;">Survey No: </label>
+            </div>
+            <div class="col-sm-3">
+                <span style="font-weight: bold;">@Model.motorClmSurHdr.SurNo</span>
+                @Html.HiddenFor(model => model.motorClmSurHdr.SurNo)
+
+            </div>
+            <div class="col-sm-3">
+                <label for="lblClmPolNo" style="font-size: large;">Chassis No:</label>
+            </div>
+            <div class="col-sm-3">
+                <span style="font-weight: bold;">@Model.motorClmSurHdr.SurChassisNo</span>
+                @Html.HiddenFor(model => model.motorClmSurHdr.SurChassisNo)
+
+
+
+
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 1%; margin-bottom: 1%;">
+            <div class="col-sm-3">
+                <label for="lblClmPolNo" style="font-size: large;">Registration No: </label>
+            </div>
+            <div class="col-sm-3">
+                <span style="font-weight: bold;">@Model.motorClmSurHdr.SurRegnNo</span>
+                @Html.HiddenFor(model => model.motorClmSurHdr.SurRegnNo)
+
+
+
+            </div>
+            <div class="col-sm-3">
+                <label for="lblClmPolNo" style="font-size: large;">Engine No: </label>
+            </div>
+            <div class="col-sm-3">
+                <span style="font-weight: bold;">@Model.motorClmSurHdr.SurEngineNo</span>
+                @Html.HiddenFor(model => model.motorClmSurHdr.SurEngineNo)
+
+
+
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 1%; margin-bottom: 1%;">
+            <div class="col-sm-3">
+                <label for="lblClmPolNo" style="font-size: large;">Currency:</label>
+            </div>
+            <div class="col-sm-3">
+                <span style="font-weight: bold;">@Model.motorClmSurHdr.SurCurr</span>
+                @Html.HiddenFor(model => model.motorClmSurHdr.SurCurr)
+
+            </div>
+            <div class="col-sm-3">
+                <label for="lblClmPolNo" style="font-size: large;">Amount(FC): </label>
+            </div>
+            <div class="col-sm-3">
+                <span style="font-weight: bold;">@Model.motorClmSurHdr.SurFcAmt</span>
+                @Html.HiddenFor(model => model.motorClmSurHdr.SurFcAmt)
+
+
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 1%; margin-bottom: 1%;">
+            <div class="col-sm-3">
+                <label for="lblClmPolNo" style="font-size: large;">Amount(LC):  </label>
+            </div>
+            <div class="col-sm-3">
+                <span style="font-weight: bold;">@Model.motorClmSurHdr.SurLcAmt</span>
+                @Html.HiddenFor(model => model.motorClmSurHdr.SurLcAmt)
+
+
+            </div>
+            <div class="col-sm-3">
+                <label for="lblClmPolNo" style="font-size: large;">Status: </label>
+            </div>
+            <div class="col-sm-3">
+                <span style="font-weight: bold;">@Model.motorClmSurHdr.SurApprSts</span>
+                @Html.HiddenFor(model => model.motorClmSurHdr.SurApprSts)
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 4%; margin-bottom: 2%">
+            <div class="d-flex align-items-center justify-content-center">
+                <h4>Spare Parts & Accessories</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <table id="SurveyDetailsList" class="table table-striped table-bordered table-condensed" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Surd Uid</th>
+                    <th>Item Name</th>
+                    <th>Type</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Amount(FC)</th>
+                    <th>Amount(LC)</th>
+
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div style="margin-top: 1.5%">
+        <div class="d-flex align-items-center justify-content-center" style="margin-top: 1.5%;">
+            @if (Model != null && Model.motorClmSurHdr.SurApprSts == "Not Approved")
+            {
+                <button type="submit" name="approvalStatus" value="A" class="btn btn-success">Approve</button>
+                <button type="submit" name="approvalStatus" value="R" class="btn btn-danger" style="margin-left: 0.50%;">Reject</button>
+            }
+            else
+            {
+                <a href="http://192.168.1.220:75/Report/ReportPage?SUR_UID=@Model.motorClmSurHdr.SurUid" class="btn btn-warning">Print</a>
+            }
+
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            function calculateFCAmount() {
+                var unitPrice = parseFloat($('#motorClmSurDtl_SurdUnitPrice').val());
+                var quantity = parseInt($('#motorClmSurDtl_SurdQuantity').val());
+
+                if (!isNaN(unitPrice) && !isNaN(quantity)) {
+                    var fcAmount = unitPrice * quantity;
+                    $('#motorClmSurDtl_SurdFcAmt').val(fcAmount.toFixed(2));
+                    var surCurr = $('#motorClmSurHdr_SurCurr').val();
+                    convertToLCAmount(surCurr, fcAmount);
+                }
+            }
+            $('#motorClmSurDtl_SurdUnitPrice, #motorClmSurDtl_SurdQuantity').on('input', calculateFCAmount);
+            var surdSurUid = $('#surUid').val();
+            var surStatus = '@Model?.motorClmSurHdr?.SurStatus';
+            $('#SurveyDetailsList').DataTable({
+                ajax: {
+                    url: "/Transaction/Survey/GetSurveyDetailsList?surdSurUid=" + surdSurUid,
+                    type: "GET"
+                },
+                processing: true,
+                serverSide: true,
+                searching: false,
+                pageLength: 6,
+                lengthChange: false,
+                columns: [
+                    { data: "surdUid", name: "Surd Uid", visible: false },
+                    { data: "surdItemCode", name: "Item Name" },
+                    { data: "surdType", name: "Type" },
+
+                    {
+                        data: "surdUnitPrice", name: "Unit Price",
+                        render: function (data, type, full, meta) {
+                            return '<div style="text-align: right;">' + Number(data).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</div>';
+                        }
+                    },
+                    {
+                        data: "surdQuantity", name: "Quantity",
+                        render: function (data, type, full, meta) {
+                            return '<div style="text-align: right;">' + Number(data).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</div>';
+                        }
+                    },
+                    {
+                        data: "surdFcAmt", name: "Amount(Fc)",
+                        render: function (data, type, full, meta) {
+                            return '<div style="text-align: right;">' + Number(data).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</div>';
+                        }
+                    },
+                    {
+                        data: "surdLcAmt", name: "Amount(Lc)",
+                        render: function (data, type, full, meta) {
+                            return '<div style="text-align: right;">' + Number(data).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</div>';
+                        }
+                    },
+
+                ],
+                responsive: true
+            });
+        });
+    </script>
+    }

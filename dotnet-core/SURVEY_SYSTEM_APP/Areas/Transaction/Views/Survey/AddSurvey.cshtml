@@ -1,0 +1,403 @@
+﻿@using SURVEY_SYSTEM_APP.Areas.Transaction.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_LayoutSurveyor";
+
+}
+@model MotorClmSurHdrModel
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div class="col-1" style="margin-left: 99.9%; margin-right: 2%">
+            <button id="btnBack" class="btn btn-dark" onclick="javascript:history.back(); return false;">Back</button>
+        </div>
+    </div>
+</div>
+
+<div style="margin-right: 10%; margin-left: 10%; margin-top: 2%; margin-bottom: initial">
+
+    @if (Model != null && Model.motorClmSurHdr != null)
+    {
+        <h2 style="font-size: x-large; color: #10898d; font-weight: bold; display: inline-block;">Survey No: </h2>
+        <span style="font-size: large; display: inline-block; margin-left: 5px;">@Html.DisplayFor(model => model.motorClmSurHdr.SurNo)</span>
+    }
+    else
+    {
+        <h4>Add Survey</h4>
+    }
+    @using (Html.BeginForm("SaveSurveyHeader", "Survey", FormMethod.Post, new { id = "SurveyHeaderForm" }))
+    {
+        <input type="hidden" id="surUid" name="motorClmSurHdr.SurUid" value="@Model?.motorClmSurHdr?.SurUid" />
+        <input type="hidden" id="clmUid" name="motorClaim.ClmUid" value="@Model?.motorClaim?.ClmUid" />
+        <input type="hidden" id="sdurNo" name="motorClmSurHdr.SurNo" value="@Model?.motorClmSurHdr?.SurNo" />
+        @Html.HiddenFor(model => model.motorClmSurHdr.SurNo)
+        <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 3%; margin-bottom: 2%;">
+            @if (Model != null && Model.motorClmSurHdr != null)
+            {
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClmSurHdr.SurclmNo,"Claim No")
+                    @Html.TextBoxFor(model => model.motorClmSurHdr.SurclmNo, new { @class = "form-control", @readonly = "readonly"  })
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClmSurHdr.SurChassisNo,"Chassis No")
+                    @Html.TextBoxFor(model => model.motorClmSurHdr.SurChassisNo, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClmSurHdr.SurRegnNo,"Registration No")
+                    @Html.TextBoxFor(model => model.motorClmSurHdr.SurRegnNo, new { @class = "form-control" , @readonly = "readonly"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClmSurHdr.SurEngineNo,"Engine No")
+                    @Html.TextBoxFor(model => model.motorClmSurHdr.SurEngineNo, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            }
+            else
+            {
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmNo,"Claim No")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmNo, new { @class = "form-control", @readonly = "readonly"  })
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehChassisNo,"Chassis No")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehChassisNo, new { @class = "form-control", @readonly = "readonly"  })
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehRegnNo,"Registration No")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehRegnNo, new { @class = "form-control" , @readonly = "readonly" })
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehEngineNo,"Engine No")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehEngineNo, new { @class = "form-control", @readonly = "readonly"  })
+                </div>
+            }
+        </div>
+
+        <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom: 2%;">
+            <div class="col-sm-3">
+                @Html.LabelFor(model => model.motorClmSurHdr.SurCurr,"Currency")
+                @Html.DropDownListFor(model => model.motorClmSurHdr.SurCurr,Model.SurCurrList, new { @class = "form-control" })
+                @Html.HiddenFor(model => model.motorClmSurHdr.SurCurr)
+            </div>
+            <div class="col-sm-3">
+
+                @Html.LabelFor(model => model.motorClmSurHdr.SurFcAmt,"Amount(FC)")
+                @Html.TextBoxFor(model => model.motorClmSurHdr.SurFcAmt, new { @class = "form-control text-right" , @readonly = "readonly" })
+
+            </div>
+            <div class="col-sm-3">
+                @Html.LabelFor(model => model.motorClmSurHdr.SurLcAmt,"Amount(LC)")
+                @Html.TextBoxFor(model => model.motorClmSurHdr.SurLcAmt, new { @class = "form-control text-right", @readonly = "readonly" })
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom: 1%;">
+            <div class="d-flex align-items-center justify-content-center">
+
+                @if (Model != null && Model.motorClmSurHdr != null)
+                {
+                    if (Model.motorClmSurHdr.SurStatus == "P")
+                    {
+                        <button type="submit" id="btnSubmit" class="btn btn-warning">Submit</button>
+                    }
+                }
+                else
+                {
+                    <button type="submit" class="btn btn-success">Save</button>
+                }
+            </div>
+        </div>
+    }
+</div>
+@if (Model != null && Model.motorClmSurHdr != null)
+{
+    <div class="container ">
+        <div class="row">
+            <div style="position: absolute; right: 2%; width: 92%; text-align: right;">
+
+                @if (Model != null && Model.motorClmSurHdr != null && Model.motorClmSurHdr.SurStatus == "P")
+                {
+                    <button id="btnAddDetails" class="btn btn-primary" data-toggle="modal" data-target="#addSurveyDetailsModal" onclick="resetForm()">Add Parts</button>
+                }
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+                <h4>Accessories</h4>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <table id="SurveyDetailsList" class="table table-striped table-bordered table-condensed" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Surd Uid</th>
+                    <th>Item Name</th>
+                    <th>Type</th>
+                    <th style="text-align: center;">Unit Price</th>
+                    <th style ="text-align: center;">Quantity</th>
+                    <th style="text-align: center;">Amount(FC)</th>
+                    <th style="text-align: center;">Amount(LC)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+}
+@if (TempData["Message1"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            Swal.fire(
+                '@TempData["Message1"]',
+                '@TempData["Message2"]',
+                '@TempData["Message3"]'
+            )
+        };
+
+    </script>
+}
+<div class="modal" id="addSurveyDetailsModal" tabindex="-1" role="dialog" aria-labelledby="addSurveyDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addSurveyDetailsModalLabel">Add Spareparts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("SaveSurveyDetails", "Survey", FormMethod.Post, new { id = "SurveyDetailsForm" }))
+                {
+                    <input type="hidden" id="surdSurUid" name="motorClmSurDtl.SurdSurUid" value="@Model?.motorClmSurHdr?.SurUid" />
+                    <input type="hidden" id="surdUid" name="motorClmSurDtl.SurdUid" value="@Model?.motorClmSurDtl?.SurdUid" />
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.motorClmSurDtl.SurdItemCode,"Item Code")
+                                @Html.DropDownListFor(model => model.motorClmSurDtl.SurdItemCode,Model.SurdItemCodeList, new { @class = "form-control"  , @required = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.motorClmSurDtl.SurdType,"Type")
+                                @Html.DropDownListFor(model => model.motorClmSurDtl.SurdType,Model.SurdTypeList, new { @class = "form-control", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.motorClmSurDtl.SurdUnitPrice,"Unit Price")
+                                @Html.TextBoxFor(model => model.motorClmSurDtl.SurdUnitPrice, new { @class = "form-control text-right", @required = "required",  @pattern = "\\d{1,7}(\\.\\d{0,2})?", @title = "Enter a number between 0.01 and 999999.99" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.motorClmSurDtl.SurdQuantity,"Quantity")
+                                @Html.TextBoxFor(model => model.motorClmSurDtl.SurdQuantity, new { @class = "form-control text-right", @required = "required",  @pattern = "\\d{1,9}?", @title = "Enter a number between 1 and 99999999"  })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.motorClmSurDtl.SurdFcAmt,"Amount(FC)")
+                                @Html.TextBoxFor(model => model.motorClmSurDtl.SurdFcAmt, new { @class = "form-control text-right", @required = "required" ,  @pattern = "\\d{1,7}(\\.\\d{0,2})?", @title = "Enter a number between 0.01 and 999999.99"  })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.motorClmSurDtl.SurdLcAmt,"Amount(LC)")
+                                @Html.TextBoxFor(model => model.motorClmSurDtl.SurdLcAmt, new { @class = "form-control text-right" , @required = "required",  @pattern = "\\d{1,7}(\\.\\d{0,2})?", @title = "Enter a number between 0.01 and 999999.99" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="submit" class="btn btn-success" id="btnSave">Save</button>
+                        <button type="submit" class="btn btn-warning" id="btnUpdate" style="display:none">Update</button>
+                        <button type="button" class="btn btn-danger" onclick="resetForm()" id="btnReset">Reset</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function calculateFCAmount() {
+                var unitPrice = parseFloat($('#motorClmSurDtl_SurdUnitPrice').val());
+                var quantity = parseInt($('#motorClmSurDtl_SurdQuantity').val());
+
+                if (!isNaN(unitPrice) && !isNaN(quantity)) {
+                    var fcAmount = unitPrice * quantity;
+                    $('#motorClmSurDtl_SurdFcAmt').val(fcAmount.toFixed(2));
+                    var surCurr = $('#motorClmSurHdr_SurCurr').val();
+                    convertToLCAmount(surCurr, fcAmount);
+                }
+            }
+            $('#motorClmSurDtl_SurdUnitPrice, #motorClmSurDtl_SurdQuantity').on('input', calculateFCAmount);
+            var surdSurUid = $('#surUid').val();
+            var surStatus = '@Model?.motorClmSurHdr?.SurStatus';
+
+            $('#SurveyDetailsList').DataTable({
+                ajax: {
+                    url: "/Transaction/Survey/GetSurveyDetailsList?surdSurUid=" + surdSurUid,
+                    type: "GET"
+                },
+                processing: true,
+                serverSide: true,
+                searching: false,
+                pageLength: 6,
+                lengthChange: false,
+                columns: [
+                    { data: "surdUid", name: "Surd Uid", visible: false },
+                    { data: "surdItemCode", name: "Item Name" },
+                    { data: "surdType", name: "Type" },
+
+                    {
+                        data: "surdUnitPrice", name: "Unit Price",
+                        render: function (data, type, full, meta) {
+                            return '<div style="text-align: right;">' + Number(data).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</div>';
+                        }
+                    },
+
+                    {
+                        data: "surdQuantity", name: "Quantity",
+                        render: function (data, type, full, meta) {
+                            return '<div style="text-align: right;">' + Number(data).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</div>';
+                        }
+                    },
+
+                    {
+                        data: "surdFcAmt", name: "Amount(Fc)",
+                        render: function (data, type, full, meta) {
+                            return '<div style="text-align: right;">' + Number(data).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</div>';
+                        }
+                    },
+                    {
+                        data: "surdLcAmt", name: "Amount(Lc)",
+                        render: function (data, type, full, meta) {
+                            return '<div style="text-align: right;">' + Number(data).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</div>';
+                        }
+                    },
+
+                    {
+                        data: null,
+                        render: function (data, type, row) {
+
+                            return '<div class="btn-group" role="group">' +
+                                '<button class="btn btn-warning btn-sm" onclick="openEditModal(\'' + row.surdUid + '\')">Edit</button>' +
+                                '<button class="btn btn-danger btn-sm ml-1" onclick="DeleteSurveyDetails(\'' + row.surdUid + '\')">Delete</button>' +
+                                '</div>';
+                        }
+                    }
+                ],
+                columnDefs: [
+                    {
+                        targets: [7],
+                        visible: surStatus !== 'S',
+                    }
+                ],
+                responsive: true
+            });
+            updateSubmitButtonStatus();
+
+            $('#SurveyDetailsList').on('draw.dt', updateSubmitButtonStatus);
+
+            function updateSubmitButtonStatus() {
+                var numRows = $('#SurveyDetailsList').DataTable().rows().count();
+
+                $('#btnSubmit').prop('disabled', surStatus === 'S' || numRows === 0);
+                if (numRows > 0) {
+                    $('#motorClmSurHdr_SurCurr').prop('disabled', true);
+
+                } else {
+                    $('#motorClmSurHdr_SurCurr').prop('disabled', false);
+                }
+            }
+
+        });
+
+        function openEditModal(surdUid) {
+            $.ajax({
+                url: '/Transaction/Survey/GetSurveyDetails?surdUid=' + surdUid,
+                type: 'GET',
+                data: { surdUid: surdUid },
+                success: function (data) {
+                    populateModal(data);
+                    $('#addSurveyDetailsModal').modal('show');
+                },
+                error: function (error) {
+                    console.log("Error:", error);
+                }
+            });
+        }
+        function DeleteSurveyDetails(surdUid) {
+            var surdSurUid = $('#surUid').val();
+            if (confirm('Are you sure you want to delete this record?')) {
+                window.location.href = '/Transaction/Survey/DeleteSurveyDetails?surdUid=' + surdUid + '&surdSurUid=' + surdSurUid;
+            }
+        }
+
+        function populateModal(data) {
+            $('#surdUid').val(data.surdUid);
+            $('#motorClmSurDtl_SurdItemCode').val(data.surdItemCode);
+            $('#motorClmSurDtl_SurdType').val(data.surdType);
+            $('#motorClmSurDtl_SurdUnitPrice').val(data.surdUnitPrice);
+            $('#motorClmSurDtl_SurdQuantity').val(data.surdQuantity);
+            $('#motorClmSurDtl_SurdFcAmt').val(data.surdFcAmt);
+            $('#motorClmSurDtl_SurdLcAmt').val(data.surdLcAmt);
+            $('#btnSave').hide();
+            $('#btnUpdate').show();
+        }
+
+        function convertToLCAmount(surCurr, fcAmount) {
+            $.ajax({
+                url: '/Transaction/Survey/GetConversionRate',
+                type: 'GET',
+                data: { surCurr: surCurr, fcAmount: fcAmount },
+                success: function (data) {
+
+                    $('#motorClmSurDtl_SurdLcAmt').val(data.toFixed(2));
+                },
+                error: function (error) {
+                    console.log("Error:", error);
+                }
+            });
+        }
+        function resetForm() {
+
+            $("#addSurveyDetailsModal input[type='text'], #addSurveyDetailsModal select").val('');
+
+            if (data.surUid) {
+                $('#btnUpdate').show();
+                $('#btnSave').hide();
+            } else {
+                $('#btnSave').show();
+                $('#btnUpdate').hide();
+            }
+        }
+
+        $('#btnAddDetails').click(function () {
+            resetForm();
+        });
+
+        function updateTotalAmounts() {
+            var totalFCAmount = 0;
+            var totalLCAmount = 0;
+
+            $('#SurveyDetailsList').DataTable().rows().every(function (rowIdx, tableLoop, rowLoop) {
+                var data = this.data();
+
+                totalFCAmount += parseFloat(data.surdFcAmt) || 0;
+                totalLCAmount += parseFloat(data.surdLcAmt) || 0;
+            });
+
+            $('#motorClmSurHdr_SurFcAmt').val(totalFCAmount.toFixed(2));
+            $('#motorClmSurHdr_SurLcAmt').val(totalLCAmount.toFixed(2));
+        }
+        $('#SurveyDetailsList').on('draw.dt', function () {
+            updateTotalAmounts();
+        });
+    </script>
+}

@@ -1,0 +1,107 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SURVEY_SYSTEM_APP
+build_property.RootNamespace = SURVEY_SYSTEM_APP
+build_property.ProjectDir = E:\Projects\MotorSurveySystem\dotnet-core\SURVEY_SYSTEM_APP\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Projects\MotorSurveySystem\dotnet-core\SURVEY_SYSTEM_APP
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Master/Views/CodesMaster/CodesMasterList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFzdGVyXFZpZXdzXENvZGVzTWFzdGVyXENvZGVzTWFzdGVyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Master/Views/ErrorCodesMaster/ErrorCodesMasterList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFzdGVyXFZpZXdzXEVycm9yQ29kZXNNYXN0ZXJcRXJyb3JDb2Rlc01hc3Rlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Master/Views/Shared/_LayoutSurveyor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFzdGVyXFZpZXdzXFNoYXJlZFxfTGF5b3V0U3VydmV5b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Master/Views/Shared/_LayoutUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFzdGVyXFZpZXdzXFNoYXJlZFxfTGF5b3V0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Master/Views/Shared/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFzdGVyXFZpZXdzXFNoYXJlZFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Master/Views/UserMaster/UserMasterList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFzdGVyXFZpZXdzXFVzZXJNYXN0ZXJcVXNlck1hc3Rlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/Dashboard/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/MotorClaim/AddMotorClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcTW90b3JDbGFpbVxBZGRNb3RvckNsYWltLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/MotorClaim/MotorClaimList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcTW90b3JDbGFpbVxNb3RvckNsYWltTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/MotorClaim/ViewSurvey.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcTW90b3JDbGFpbVxWaWV3U3VydmV5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/Shared/_LayoutSurveyor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcU2hhcmVkXF9MYXlvdXRTdXJ2ZXlvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/Shared/_LayoutUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcU2hhcmVkXF9MYXlvdXRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/Survey/AddSurvey.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcU3VydmV5XEFkZFN1cnZleS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/Survey/PendingMotorClaimList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcU3VydmV5XFBlbmRpbmdNb3RvckNsYWltTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/Survey/SurveyHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcU3VydmV5XFN1cnZleUhpc3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Areas/Transaction/Views/Survey/SurveyList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNhY3Rpb25cVmlld3NcU3VydmV5XFN1cnZleUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MotorSurveySystem/dotnet-core/SURVEY_SYSTEM_APP/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

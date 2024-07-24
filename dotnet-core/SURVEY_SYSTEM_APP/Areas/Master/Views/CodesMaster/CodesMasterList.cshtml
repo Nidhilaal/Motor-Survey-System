@@ -1,0 +1,190 @@
+﻿@using SURVEY_SYSTEM_APP.Areas.Master.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_LayoutUser";
+
+}
+@model CodesMasterModel
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div style="position: absolute; right: 2%; width: 92%; text-align: right;">
+            <button type="button" id="btnAddCm" class="btn btn-primary" data-toggle="modal" data-target="#addCodeModal" onclick="resetForm()">Add</button>
+            <button id="btnBack" class="btn btn-dark" onclick="javascript:history.back(); return false;">Back</button>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 3%; margin-bottom: initial" class="d-flex align-items-center justify-content-center">
+    <h4 style="font-weight: bold">CODES MASTER</h4>
+</div>
+<div class="d-flex align-items-center justify-content-center" style="margin-top: 2%"></div>
+<div class="container">
+    <table id="CodesMasterTable" class="table table-striped table-bordered table-condensed" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Value</th>
+                <th>Active</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+@if (TempData["Message1"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            Swal.fire(
+                '@TempData["Message1"]',
+                '@TempData["Message2"]',
+                '@TempData["Message3"]'
+            )
+        };
+
+    </script>
+}
+<div class="modal" id="addCodeModal" tabindex="-1" role="dialog" aria-labelledby="addCodeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCodeModalLabel">Add Code</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("SaveCodesMaster", "CodesMaster", FormMethod.Post))
+                {
+                    <input type="hidden" id="mode" name="mode" value="" />
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.codesMaster.CmType,"Type")
+                                @Html.TextBoxFor(model => model.codesMaster.CmType, new { @class = "form-control", @required="required", maxlength="12" })
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.codesMaster.CmCode,"Code")
+                                @Html.TextBoxFor(model => model.codesMaster.CmCode, new { @class = "form-control", @required="required", maxlength="12" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.codesMaster.CmDesc,"Description")
+                                @Html.TextBoxFor(model => model.codesMaster.CmDesc, new { @class = "form-control", @required="required" , maxlength="240"  })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.codesMaster.CmValue,"Value")
+                                @Html.TextBoxFor(model => model.codesMaster.CmValue, new { @class = "form-control" ,  @pattern = "\\d{1,7}(\\.\\d{0,2})?", @title = "Enter a number between 0.01 and 999999.99"})
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row" style="margin-left:1%">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.CheckBoxFor(model => model.IsCmActiveYn, new { @class = "form-check-input", id = "cmActiveCheckbox" })
+                                @Html.LabelFor(model => model.IsCmActiveYn, "Active")
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="submit" class="btn btn-success" id="btnSave">Save</button>
+                        <button type="submit" class="btn btn-warning" id="btnUpdate" style="display:none">Update</button>
+                        <button type="reset" class="btn btn-danger" id="btnReset" >Reset</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        function openEditCodeModal(cmCode) {
+            var table = $('#CodesMasterTable').DataTable();
+            var rowData = table.rows().data().filter(function (value, index) {
+                return value.cmCode === cmCode;
+            });
+
+            if (rowData.length > 0) {
+                var selectedRow = rowData[0];
+                $('#addCodeModal').modal('show');
+
+                $('#codesMaster_CmType').val(selectedRow.cmType);
+                $('#codesMaster_CmCode').val(selectedRow.cmCode);
+                $('#codesMaster_CmDesc').val(selectedRow.cmDesc);
+                $('#codesMaster_CmValue').val(selectedRow.cmValue);
+
+                $('#codesMaster_CmType').prop('readonly', true);
+                $('#codesMaster_CmCode').prop('readonly', true);
+
+                $('#mode').val('edit');
+
+                $('#cmActiveCheckbox').closest('.form-group').show();
+                $('#cmActiveCheckbox').prop('checked', selectedRow.cmActiveYn == "Yes" ? true : false);
+
+                $('#btnSave').hide();
+                $('#btnUpdate').show();
+            }
+        }
+
+        function DeleteCodesMaster(cmCode, cmType) {
+            if (confirm('Are you sure you want to delete this record?')) {
+                var url = '/Master/CodesMaster/DeleteCodesMaster?cmCode=' + encodeURIComponent(cmCode) + '&cmType=' + encodeURIComponent(cmType);
+                window.location.href = url;
+            }
+        }
+        function resetForm() {
+
+            $("#addCodeModal input[type='text'], #addCodeModal select").val('');
+            $('#cmActiveCheckbox').closest('.form-group').hide();
+            $('#mode').val('');
+            $('#btnSave').show();
+            $('#btnUpdate').hide();
+            $('#codesMaster_CmType').prop('readonly', false);
+            $('#codesMaster_CmCode').prop('readonly', false);
+
+
+        }
+        $(document).ready(function () {
+            $('#cmActiveCheckbox').closest('.form-group').hide();
+            $('#CodesMasterTable').DataTable({
+                ajax: {
+                    url: "/Master/CodesMaster/GetCodesMasterList",
+                    type: "POST"
+                },
+                processing: true,
+                serverSide: true,
+                searching: false,
+                pageLength: 6,
+                lengthChange: false,
+                columns: [
+                    { data: "cmType", name: "Type" },
+                    { data: "cmCode", name: "Code" },
+                    { data: "cmDesc", name: "Description" },
+                    { data: "cmValue", name: "Value" },
+                    { data: "cmActiveYn", name: "Active" },
+                    {
+                        data: null,
+                        render: function (data, type, row) {
+                            return `<button class="btn btn-warning btn-sm" onclick="openEditCodeModal('${row.cmCode}')">Edit</button>&nbsp;
+                                                                <button class="btn btn-danger btn-sm" onclick="DeleteCodesMaster('${row.cmCode}', '${row.cmType}')">Delete</button>`;
+                        }
+                    }
+                ],
+                responsive: true
+            });
+           
+            
+        });
+    </script>
+}

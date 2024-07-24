@@ -1,0 +1,82 @@
+﻿@using SURVEY_SYSTEM_APP.Areas.Transaction.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_LayoutSurveyor";
+
+}
+@model MotorClaimModel
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div class="col-1" style="margin-left: 99.9%; margin-right: 2%">
+            <button id="btnBack" class="btn btn-dark" onclick="javascript:history.back(); return false;">Back</button>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 1%; margin-bottom: initial" class="d-flex align-items-center justify-content-center">
+    <h4 style="font-weight: bold">Survey  List</h4>
+</div>
+<div class="d-flex align-items-center justify-content-center" style="margin-top: 2%"></div>
+<div class="container">
+    <table id="SurveyHeaderTable" class="table table-striped table-bordered table-condensed" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Survey Uid</th>
+                <th>Claim No</th>
+                <th>Survey No</th>
+                <th>Chassis No</th>
+                <th>Registration No</th>
+                <th>Engine No</th>
+                <th>Survey Status</th>
+                <th>Approval Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+@section Scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#SurveyHeaderTable').DataTable({
+                ajax: {
+                    url: "/Transaction/Survey/GetSurveyHeaderList",
+                    type: "POST"
+                },
+                processing: true,
+                serverSide: true,
+                searching: false, 
+                pageLength: 6,
+                lengthChange: false,
+                columns: [
+                    { data: "surUid", name: "Survey Uid", visible: false },
+                    { data: "surclmNo", name: "Claim No" },
+                    { data: "surNo", name: "Survey No" },
+                    { data: "surChassisNo", name: "Chassis No" },
+                    { data: "surRegnNo", name: "Registration No" },
+                    { data: "surEngineNo", name: "Engine No" },
+                    { data: "surStatus", name: "Survey Status" },
+                    { data: "surApprSts", name: "Approval Status" },
+                    {
+                        data: null,
+                        render: function (data, type, row) {
+                            if (row.surStatus === 'Pending') {
+                                return '<button class="btn btn-warning btn-sm" onclick="EditSurvey(\'' + row.surUid + '\')">Edit</button>';
+                            } else {
+                                return '<button class="btn btn-info btn-sm" onclick="EditSurvey(\'' + row.surUid + '\')">View</button>';
+
+                            }
+                        }
+                        
+                    }
+                ],
+                responsive: true
+                
+            });
+        });
+        function EditSurvey(surUid) {
+            window.location.href = '/Transaction/Survey/AddSurvey/S/' + surUid;
+        }
+       
+    </script>
+
+}

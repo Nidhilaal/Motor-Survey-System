@@ -1,0 +1,357 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_APP\\SURVEY_SYSTEM_APP.csproj": {}
+  },
+  "projects": {
+    "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.BusinessLayer\\SURVEY_SYSTEM.BusinessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.BusinessLayer\\SURVEY_SYSTEM.BusinessLayer.csproj",
+        "projectName": "SURVEY_SYSTEM.BusinessLayer",
+        "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.BusinessLayer\\SURVEY_SYSTEM.BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.BusinessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.DataAccessLayer\\SURVEY_SYSTEM.DataAccessLayer.csproj": {
+                "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.DataAccessLayer\\SURVEY_SYSTEM.DataAccessLayer.csproj"
+              },
+              "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.EntityLayer\\SURVEY_SYSTEM.EntityLayer.csproj": {
+                "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.EntityLayer\\SURVEY_SYSTEM.EntityLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.DataAccessLayer\\SURVEY_SYSTEM.DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.DataAccessLayer\\SURVEY_SYSTEM.DataAccessLayer.csproj",
+        "projectName": "SURVEY_SYSTEM.DataAccessLayer",
+        "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.DataAccessLayer\\SURVEY_SYSTEM.DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.DataAccessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[3.21.130, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.EntityLayer\\SURVEY_SYSTEM.EntityLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.EntityLayer\\SURVEY_SYSTEM.EntityLayer.csproj",
+        "projectName": "SURVEY_SYSTEM.EntityLayer",
+        "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.EntityLayer\\SURVEY_SYSTEM.EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.EntityLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_API\\SURVEY_SYSTEM_API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_API\\SURVEY_SYSTEM_API.csproj",
+        "projectName": "SURVEY_SYSTEM_API",
+        "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_API\\SURVEY_SYSTEM_API.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.BusinessLayer\\SURVEY_SYSTEM.BusinessLayer.csproj": {
+                "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.BusinessLayer\\SURVEY_SYSTEM.BusinessLayer.csproj"
+              },
+              "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.DataAccessLayer\\SURVEY_SYSTEM.DataAccessLayer.csproj": {
+                "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.DataAccessLayer\\SURVEY_SYSTEM.DataAccessLayer.csproj"
+              },
+              "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.EntityLayer\\SURVEY_SYSTEM.EntityLayer.csproj": {
+                "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.EntityLayer\\SURVEY_SYSTEM.EntityLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_APP\\SURVEY_SYSTEM_APP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_APP\\SURVEY_SYSTEM_APP.csproj",
+        "projectName": "SURVEY_SYSTEM_APP",
+        "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_APP\\SURVEY_SYSTEM_APP.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_APP\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.BusinessLayer\\SURVEY_SYSTEM.BusinessLayer.csproj": {
+                "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.BusinessLayer\\SURVEY_SYSTEM.BusinessLayer.csproj"
+              },
+              "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.DataAccessLayer\\SURVEY_SYSTEM.DataAccessLayer.csproj": {
+                "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.DataAccessLayer\\SURVEY_SYSTEM.DataAccessLayer.csproj"
+              },
+              "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.EntityLayer\\SURVEY_SYSTEM.EntityLayer.csproj": {
+                "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM.EntityLayer\\SURVEY_SYSTEM.EntityLayer.csproj"
+              },
+              "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_API\\SURVEY_SYSTEM_API.csproj": {
+                "projectPath": "E:\\Projects\\MotorSurveySystem\\dotnet-core\\SURVEY_SYSTEM_API\\SURVEY_SYSTEM_API.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

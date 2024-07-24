@@ -1,0 +1,333 @@
+﻿@using SURVEY_SYSTEM_APP.Areas.Transaction.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_LayoutUser";
+
+}
+@model MotorClaimModel
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div style="position: absolute; right: 2%; width: 92%; text-align: right;">
+
+            @if (Model != null && Model.motorClaim != null && !string.IsNullOrEmpty(Model.motorClaim.ClmNo))
+            {
+                <a href="/Transaction/MotorClaim/AddMotorClaim" class="btn btn-primary">Add</a>
+            }
+
+            <button id="btnBack" class="btn btn-dark" onclick="javascript:history.back(); return false;">Back</button>
+        </div>
+    </div>
+</div>
+
+@if (TempData["Message1"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            Swal.fire(
+                '@TempData["Message1"]',
+                '@TempData["Message2"]',
+                '@TempData["Message3"]'
+            )
+        };
+
+    </script>
+}
+
+
+<div style="margin-right: 10%; margin-left: 10%; margin-top: 5%; margin-bottom: initial">
+
+    @if (Model != null && Model.motorClaim != null && !string.IsNullOrEmpty(Model.motorClaim.ClmNo))
+    {
+        <h2 style="font-size: x-large; color: #10898d; font-weight: bold; display: inline-block;">Claim No: </h2>
+        <span style="font-size: large; display: inline-block; margin-left: 5px;">@Html.DisplayFor(model => model.motorClaim.ClmNo)</span>
+    }
+    else
+    {
+        <h4>Add Claim Details</h4>
+    }
+    @using (Html.BeginForm("SaveMotorClaim", "MotorClaim", FormMethod.Post, new { id = "claimFormId" }))
+    {
+        <input type="hidden" id="ClmUid" name="motorClaim.ClmUid" value="@Model?.motorClaim?.ClmUid" />
+        if (Model != null && Model.motorClaim.ClmSurCrYn == "Y")
+        {
+            <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 3%; margin-bottom: 2%;">
+                <div class="col-sm-3">
+
+                    <input type="hidden" id="surNo" name="motorClaim.clmSurNo" value="@Model?.motorClaim?.ClmSurNo" />
+
+                    @Html.LabelFor(model => model.motorClaim.ClmPolNo,"Policy No")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmPolNo, new { @class = "form-control" , @required = "required", maxlength = "30",@disabled = "disabled"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmPolFmDt,"Policy From")
+
+                    @Html.TextBoxFor(model => model.motorClaim.ClmPolFmDt, "{0:dd-MM-yyyy}", new { @class = "form-control", @required = "required",  @id = "txtClaimFromDate" , @disabled = "disabled"  })
+
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmPolToDt,"Policy To")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmPolToDt, "{0:dd-MM-yyyy}", new { @class = "form-control", @required = "required",  @id = "txtClaimToDate" ,@disabled = "disabled"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmLossDt,"Loss Date")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmLossDt, "{0:dd-MM-yyyy}", new { @class = "form-control", @required = "required",  @id = "txtClaimPolicyLossDate", @disabled = "disabled"})
+                </div>
+            </div>
+
+            <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom: 2%;">
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmIntmDt,"Claim Intimation Date")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmIntmDt, "{0:dd-MM-yyyy}", new { @class = "form-control", @required = "required",  @id = "txtClaimIntmDate",@disabled = "disabled"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmRegDt,"Claim Registration Date")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmRegDt, "{0:dd-MM-yyyy}", new { @class = "form-control", @required = "required",  @id = "txtClaimRegnDate" ,@disabled = "disabled"})
+                </div>
+
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmPolRepNo,"Police Report No")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmPolRepNo, new { @class = "form-control" , @required = "required", maxlength = "30", @disabled = "disabled"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmLossDesc,"Loss Description")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmLossDesc, new { @class = "form-control" , @required = "required", maxlength = "120", @disabled = "disabled"})
+                </div>
+            </div>
+            <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom: 2%;">
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehChassisNo,"Vehicle Chassis Number")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehChassisNo, new { @class = "form-control", @required = "required", maxlength = "30" , @disabled = "disabled"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehEngineNo,"Vehicle Engine Number")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehEngineNo, new { @class = "form-control" , @required = "required", maxlength = "30", @disabled = "disabled"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehRegnNo,"Vehicle Registration No")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehRegnNo, new { @class = "form-control" , @required = "required", maxlength = "12", @disabled = "disabled"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehValue,"Vehicle Value")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehValue, new { @class = "form-control text-right" , @required = "required",  @pattern = "\\d{1,7}(\\.\\d{0,2})?", @title = "Enter a number between 0.01 and 999999.99", @disabled = "disabled" })
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 3%; margin-bottom: 2%;">
+                <div class="col-sm-3">
+
+                    <input type="hidden" id="surNo" name="motorClaim.clmSurNo" value="@Model?.motorClaim?.ClmSurNo" />
+
+                    @Html.LabelFor(model => model.motorClaim.ClmPolNo,"Policy No")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmPolNo, new { @class = "form-control" , @required = "required", maxlength = "30"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmPolFmDt,"Policy From")
+
+                    @Html.TextBoxFor(model => model.motorClaim.ClmPolFmDt, "{0:dd-MM-yyyy}", new { @class = "form-control",  @pattern = ".+",  @id = "txtClaimFromDate"  })
+
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmPolToDt,"Policy To")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmPolToDt, "{0:dd-MM-yyyy}", new { @class = "form-control", @required = "required",  @id = "txtClaimToDate" , @readonly = "readonly"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmLossDt,"Loss Date")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmLossDt, "{0:dd-MM-yyyy}", new { @class = "form-control", @required = "required",  @id = "txtClaimPolicyLossDate"})
+                </div>
+            </div>
+
+            <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom: 2%;">
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmIntmDt,"Claim Intimation Date")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmIntmDt, "{0:dd-MM-yyyy}", new { @class = "form-control", @required = "required",  @id = "txtClaimIntmDate"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmRegDt,"Claim Registration Date")
+
+                    @Html.TextBoxFor(model => model.motorClaim.ClmRegDt, "{0:dd-MM-yyyy}", new { @class = "form-control", @required = "required",  @id = "txtClaimRegnDate" })
+                </div>
+
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmPolRepNo,"Police Report No")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmPolRepNo, new { @class = "form-control" , @required = "required", maxlength = "30"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmLossDesc,"Loss Description")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmLossDesc, new { @class = "form-control" , @required = "required", maxlength = "120"})
+                </div>
+            </div>
+            <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom: 2%;">
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehChassisNo,"Vehicle Chassis Number")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehChassisNo, new { @class = "form-control", @required = "required", maxlength = "30" })
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehEngineNo,"Vehicle Engine Number")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehEngineNo, new { @class = "form-control" , @required = "required", maxlength = "30"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehRegnNo,"Vehicle Registration No")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehRegnNo, new { @class = "form-control" , @required = "required", maxlength = "12"})
+                </div>
+                <div class="col-sm-3">
+                    @Html.LabelFor(model => model.motorClaim.ClmVehValue,"Vehicle Value")
+                    @Html.TextBoxFor(model => model.motorClaim.ClmVehValue, new { @class = "form-control text-right" , @required = "required",  @pattern = "\\d{1,7}(\\.\\d{0,2})?", @title = "Enter a number between 0.01 and 999999.99" })
+                </div>
+            </div>
+        }
+        
+        <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom: 1%;">
+            <div class="d-flex align-items-center justify-content-center">
+                @if (Model != null && Model.motorClaim.ClmUid!= 0)
+                {
+                    if (Model.motorClaim.ClmSurCrYn == "Y")
+                    {
+                        if (Model.motorClaim.ClmSurNo != string.Empty)
+                        {
+                            <button type="button" class="btn btn-info" onclick="redirectToSurvey()">View Survey</button>
+
+                        }
+                       
+                    }
+                    else
+                    {
+                        <button type="submit" class="btn btn-warning">Update</button>
+                        <button type="button" class="btn btn-danger" style="margin-left: 0.50%;" onclick="resetForm()">Reset</button>
+                    }
+                }
+                else
+                {
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="button" class="btn btn-danger" style="margin-left: 0.50%;" onclick="resetForm()">Reset</button>
+                }
+            </div>
+        </div>
+    }
+</div>
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#claimFormId").submit(function (event) {
+               
+                if ($("#txtClaimFromDate").val() === "" ||
+                    $("#txtClaimToDate").val() === "" ||
+                    $("#txtClaimPolicyLossDate").val() === "" ||
+                    $("#txtClaimIntmDate").val() === "" ||
+                    $("#txtClaimRegnDate").val() === "") {
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Validation Error',
+                        text: 'Please fill in all required fields.',
+                    });
+
+                    event.preventDefault();
+                }
+            });
+        });
+        function redirectToSurvey() {
+            var clmUid = $("#ClmUid").val();
+            window.location.href = "/Transaction/MotorClaim/ViewSurvey/" + clmUid;
+
+        }
+        $(function () {
+            $("#txtClaimFromDate").datepicker(
+                {
+                    changeMonth: true,
+                    changeYear: true,
+                    dateFormat: 'dd-mm-yy',
+                    maxDate: 0,
+                    onSelect: function (selectedDate) {
+                        var fromDate = $(this).datepicker('getDate');
+                        var lossDate = $("#txtClaimPolicyLossDate").datepicker('getDate');
+                        var intmDate = $("#txtClaimIntmDate").datepicker('getDate');
+                        var toDate = new Date(fromDate);
+                        toDate.setFullYear(toDate.getFullYear() + 1);
+
+                        $("#txtClaimPolicyLossDate").datepicker('option', 'minDate', fromDate);
+                        $("#txtClaimPolicyLossDate").datepicker('option', 'maxDate', toDate);
+                        $('#txtClaimToDate').val($.datepicker.formatDate('dd-mm-yy', toDate));
+                        $("#txtClaimIntmDate").datepicker('option', 'maxDate', toDate);
+                        $("#txtClaimRegnDate").datepicker('option', 'maxDate', toDate);
+
+                        if (toDate > new Date()) {
+                            $("#txtClaimIntmDate").datepicker('option', 'maxDate', 0);
+                            $("#txtClaimPolicyLossDate").datepicker('option', 'maxDate', 0);
+                            $("#txtClaimRegnDate").datepicker('option', 'maxDate', 0);
+                        }
+
+                    }
+                });
+            $("#txtClaimFromDate").attr('readonly', 'readonly');
+
+        
+            $("#txtClaimPolicyLossDate").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'dd-mm-yy',
+                maxDate: 0,
+                onSelect: function (selectedDate) {
+                    var lossDate = $(this).datepicker('getDate');
+                    $("#txtClaimRegnDate").datepicker('option', 'minDate', lossDate);
+                    $("#txtClaimIntmDate").datepicker('option', 'minDate', lossDate);
+
+                }
+            });
+            $("#txtClaimPolicyLossDate").attr('readonly', 'readonly');
+
+            $("#txtClaimIntmDate").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'dd-mm-yy',
+                maxDate: 0, onSelect: function (selectedDate) {
+                    var intmDate = $(this).datepicker('getDate');
+
+                    $("#txtClaimRegnDate").datepicker('option', 'minDate', intmDate);
+
+                }
+            });
+            $("#txtClaimIntmDate").attr('readonly', 'readonly');
+
+            $("#txtClaimRegnDate").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'dd-mm-yy',
+                maxDate: 0
+            });
+            $("#txtClaimRegnDate").attr('readonly', 'readonly');
+
+            $("#motorClaim_ClmPolRepNo").on('blur', function () {
+                var clmPolRepNo = $(this).val();
+                var clmUid = $("#ClmUid").val(); 
+
+                $.ajax({
+                    url: '/Transaction/MotorClaim/CheckUniquePoliceRepNo',
+                    type: 'POST',
+                    data: { clmPolRepNo: clmPolRepNo, clmUid: clmUid },
+                    success: function (result) {
+                        if (result === true) {
+                            $("#motorClaim_ClmPolRepNo").val('');
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Warning',
+                                text: 'Police Report Number already exists.',
+                            });
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+        });
+
+        function resetForm() {
+            var form = document.getElementById('claimFormId')
+            form.reset();
+        }
+        
+      
+    </script>
+}

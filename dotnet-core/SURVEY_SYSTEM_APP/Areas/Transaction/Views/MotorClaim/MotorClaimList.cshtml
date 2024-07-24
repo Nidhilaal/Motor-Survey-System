@@ -1,0 +1,138 @@
+﻿@using SURVEY_SYSTEM_APP.Areas.Transaction.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_LayoutUser";
+
+}
+@model MotorClaimModel
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div style="position: absolute; right: 2%; width: 92%; text-align: right;">
+            <a href="/Transaction/MotorClaim/AddMotorClaim" class="btn btn-primary">Add</a>
+            <button id="btnBack" class="btn btn-dark" onclick="javascript:history.back(); return false;">Back</button>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 3%; margin-bottom: initial" class="d-flex align-items-center justify-content-center">
+    <h4 style="font-weight: bold">Claims List</h4>
+</div>
+<div class="d-flex align-items-center justify-content-center" style="margin-top: 2%;"></div>
+<div class="container">
+    <table id="MotorClaimListTable" class="table table-striped table-bordered table-condensed" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Claim UID</th>
+                <th>Claim No</th>
+                <th>Policy From</th>
+                <th>Policy To</th>
+                <th>Chassis No</th>
+                <th>Report No</th>
+                <th style ="text-align: center;">Vehicle Value</th>
+                <th>Survey created</th>
+                <th>Survey Approved</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@if (TempData["Message1"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            Swal.fire(
+                '@TempData["Message1"]',
+                '@TempData["Message2"]',
+                '@TempData["Message3"]'
+            )
+        };
+
+    </script>
+}
+
+            @section Scripts {
+    <script type="text/javascript">
+       
+        $(document).ready(function () {
+            $('#MotorClaimListTable').DataTable({
+                ajax: {
+                    url: "/Transaction/MotorClaim/GetMotorClaimList",
+                    type: "POST"
+                    
+                },
+                processing: true,
+                serverSide: true,
+                searching: false,
+                pageLength: 6,
+                lengthChange: false,
+                columns: [
+                    { data: "clmUid", name: "Claim UID", visible: false },
+                    { data: "clmNo", name: "Claim No" },
+                    {
+                        data: "clmPolFmDt", name: "Policy From", render: function (data) {
+                            return data ? formatDate(data) : '';
+                        }
+                    },
+                    {
+                        data: "clmPolToDt", name: "Policy To", render: function (data) {
+                            return data ? formatDate(data) : '';
+                        }
+                    },
+                    { data: "clmVehChassisNo", name: "Chassis No" },
+                    { data: "clmPolRepNo", name: "Report No" },
+       
+                    {
+                        data: "clmVehValue", name: "Vehicle Value",
+                        render: function (data, type, full, meta) {
+                            return '<div style="text-align: right;">' + Number(data).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</div>';
+                        }
+                    },
+                    { data: "clmSurCrYn", name: "Survey created" },
+                    { data: "clmSurApprYn", name: "Survey Approved" },
+                    {
+                        data: null,
+                        render: function (data, type, row) {
+                            if (row.clmSurCrYn === 'No') {
+                                return '<div class="btn-group" role="group">' +
+                                    '<button class="btn btn-warning btn-sm" onclick="EditMotorClaim(\'' + row.clmUid + '\')">Edit</button>' +
+                                    '<button class="btn btn-danger btn-sm ml-1" onclick="DeleteMotorClaim(\'' + row.clmUid + '\')">Delete</button>' +
+                                    '</div>';
+                            } else {
+                                return '<button class="btn btn-info btn-sm" onclick="EditMotorClaim(\'' + row.clmUid + '\')">View</button>';
+                            }
+                        }
+                    }
+
+
+
+                ],
+
+                responsive: true,
+                columnDefs: [
+                    { type: 'date-uk', targets: [2, 3] } 
+                ]
+            });
+            
+          
+
+        });
+        function EditMotorClaim(clmUid) {
+            window.location.href = '/Transaction/MotorClaim/AddMotorClaim/' + clmUid;
+        }
+        function DeleteMotorClaim(clmUid) {
+            if (confirm('Are you sure you want to delete this record?')) {
+                window.location.href = '/Transaction/MotorClaim/DeleteMotorClaim/' + clmUid;
+            }
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const day = date.getDate().toString().padStart(2, '0');
+            const month = (date.getMonth() + 1).toString().padStart(2, '0');
+            const year = date.getFullYear();
+
+            return `${day}/${month}/${year}`;
+        }
+    </script>
+
+}
