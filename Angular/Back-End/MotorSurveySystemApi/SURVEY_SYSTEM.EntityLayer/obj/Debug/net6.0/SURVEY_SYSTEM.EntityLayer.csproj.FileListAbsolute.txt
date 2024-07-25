@@ -1,0 +1,35 @@
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.deps.json
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.dll
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.pdb
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.AssemblyInfoInputs.cache
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.AssemblyInfo.cs
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.csproj.CoreCompileInputs.cache
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.dll
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\refint\SURVEY_SYSTEM.EntityLayer.dll
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.pdb
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\ref\SURVEY_SYSTEM.EntityLayer.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.deps.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.AssemblyInfo.cs
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\refint\SURVEY_SYSTEM.EntityLayer.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\ref\SURVEY_SYSTEM.EntityLayer.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.deps.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.AssemblyInfo.cs
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\refint\SURVEY_SYSTEM.EntityLayer.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM.EntityLayer\obj\Debug\net6.0\ref\SURVEY_SYSTEM.EntityLayer.dll

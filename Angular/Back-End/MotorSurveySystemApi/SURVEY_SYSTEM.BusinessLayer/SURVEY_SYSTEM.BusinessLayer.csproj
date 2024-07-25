@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>annotations</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SURVEY_SYSTEM.DataAccessLayer\SURVEY_SYSTEM.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\SURVEY_SYSTEM.EntityLayer\SURVEY_SYSTEM.EntityLayer.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,70 @@
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\appsettings.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM_EXT_API.exe
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM_EXT_API.deps.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM_EXT_API.runtimeconfig.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM_EXT_API.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM_EXT_API.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.AssemblyInfo.cs
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets\msbuild.SURVEY_SYSTEM_EXT_API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets\msbuild.build.SURVEY_SYSTEM_EXT_API.props
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SURVEY_SYSTEM_EXT_API.props
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SURVEY_SYSTEM_EXT_API.props
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\scopedcss\bundle\SURVEY_SYSTEM_EXT_API.styles.css
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.csproj.CopyComplete
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\refint\SURVEY_SYSTEM_EXT_API.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.genruntimeconfig.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\ref\SURVEY_SYSTEM_EXT_API.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\appsettings.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM_EXT_API.exe
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM_EXT_API.deps.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM_EXT_API.runtimeconfig.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM_EXT_API.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM_EXT_API.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\bin\Debug\net6.0\SURVEY_SYSTEM.EntityLayer.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.AssemblyInfo.cs
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets\msbuild.SURVEY_SYSTEM_EXT_API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets\msbuild.build.SURVEY_SYSTEM_EXT_API.props
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SURVEY_SYSTEM_EXT_API.props
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SURVEY_SYSTEM_EXT_API.props
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\scopedcss\bundle\SURVEY_SYSTEM_EXT_API.styles.css
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.csproj.CopyComplete
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\refint\SURVEY_SYSTEM_EXT_API.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\SURVEY_SYSTEM_EXT_API.genruntimeconfig.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP ANGULAR\SURVEY_SYSTEM_EXT_API\obj\Debug\net6.0\ref\SURVEY_SYSTEM_EXT_API.dll

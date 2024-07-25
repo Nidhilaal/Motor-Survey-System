@@ -1,0 +1,12 @@
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\bin\Release\net6.0\SURVEY_SYSTEM.DataAccessLayer.deps.json
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\bin\Release\net6.0\SURVEY_SYSTEM.DataAccessLayer.dll
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\bin\Release\net6.0\SURVEY_SYSTEM.DataAccessLayer.pdb
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\obj\Release\net6.0\SURVEY_SYSTEM.DataAccessLayer.csproj.AssemblyReference.cache
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\obj\Release\net6.0\SURVEY_SYSTEM.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\obj\Release\net6.0\SURVEY_SYSTEM.DataAccessLayer.AssemblyInfoInputs.cache
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\obj\Release\net6.0\SURVEY_SYSTEM.DataAccessLayer.AssemblyInfo.cs
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\obj\Release\net6.0\SURVEY_SYSTEM.DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\obj\Release\net6.0\SURVEY_SYSTEM.DataAccessLayer.dll
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\obj\Release\net6.0\refint\SURVEY_SYSTEM.DataAccessLayer.dll
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\obj\Release\net6.0\SURVEY_SYSTEM.DataAccessLayer.pdb
+D:\E0147\Assignments\DotNetCore\SURVEY_SYSTEM_APP\SURVEY_SYSTEM.DataAccessLayer\obj\Release\net6.0\ref\SURVEY_SYSTEM.DataAccessLayer.dll

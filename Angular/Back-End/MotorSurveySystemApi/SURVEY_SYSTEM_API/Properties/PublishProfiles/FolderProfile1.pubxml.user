@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\ABSPC044\Desktop\MotorSurveySystemCore\MotorApi</_PublishTargetUrl>
+    <History>True|2024-01-25T05:42:26.1662377Z;True|2024-01-23T12:02:35.6433526+05:30;True|2024-01-23T12:01:21.8238588+05:30;False|2024-01-23T12:00:33.6668502+05:30;True|2024-01-23T11:28:07.6920123+05:30;False|2024-01-23T11:27:47.2899374+05:30;True|2024-01-23T11:07:26.6487586+05:30;True|2024-01-22T18:09:40.8654553+05:30;True|2024-01-22T17:32:25.4462646+05:30;True|2024-01-22T13:02:36.1045628+05:30;False|2024-01-22T12:58:18.2144599+05:30;True|2024-01-22T12:43:25.8194389+05:30;True|2024-01-22T10:50:46.3539003+05:30;False|2024-01-22T10:50:09.0894413+05:30;True|2024-01-22T10:40:19.0080963+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

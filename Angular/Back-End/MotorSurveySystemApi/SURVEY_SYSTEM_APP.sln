@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SURVEY_SYSTEM_API", "SURVEY_SYSTEM_API\SURVEY_SYSTEM_API.csproj", "{C4B2A305-419C-41C7-873E-E685BF299A66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SURVEY_SYSTEM.BusinessLayer", "SURVEY_SYSTEM.BusinessLayer\SURVEY_SYSTEM.BusinessLayer.csproj", "{060F781C-3729-4206-9860-9398C3457902}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SURVEY_SYSTEM.DataAccessLayer", "SURVEY_SYSTEM.DataAccessLayer\SURVEY_SYSTEM.DataAccessLayer.csproj", "{A59029AD-19B9-4CEA-936E-A308464E7BD2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SURVEY_SYSTEM.EntityLayer", "SURVEY_SYSTEM.EntityLayer\SURVEY_SYSTEM.EntityLayer.csproj", "{A68E10F7-4467-42B6-A01C-3B06BD79D7F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SURVEY_SYSTEM_EXT_API", "SURVEY_SYSTEM_EXT_API\SURVEY_SYSTEM_EXT_API.csproj", "{055873B3-53D1-43F9-94E1-93297825F766}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SURVEY_SYSTEM.Shared", "Shared\SURVEY_SYSTEM.Shared.csproj", "{346308BA-6DF7-425B-A564-448D4EA3D376}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4B2A305-419C-41C7-873E-E685BF299A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B2A305-419C-41C7-873E-E685BF299A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B2A305-419C-41C7-873E-E685BF299A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B2A305-419C-41C7-873E-E685BF299A66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{060F781C-3729-4206-9860-9398C3457902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{060F781C-3729-4206-9860-9398C3457902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{060F781C-3729-4206-9860-9398C3457902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{060F781C-3729-4206-9860-9398C3457902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A59029AD-19B9-4CEA-936E-A308464E7BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59029AD-19B9-4CEA-936E-A308464E7BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59029AD-19B9-4CEA-936E-A308464E7BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59029AD-19B9-4CEA-936E-A308464E7BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A68E10F7-4467-42B6-A01C-3B06BD79D7F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68E10F7-4467-42B6-A01C-3B06BD79D7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68E10F7-4467-42B6-A01C-3B06BD79D7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68E10F7-4467-42B6-A01C-3B06BD79D7F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055873B3-53D1-43F9-94E1-93297825F766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055873B3-53D1-43F9-94E1-93297825F766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055873B3-53D1-43F9-94E1-93297825F766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055873B3-53D1-43F9-94E1-93297825F766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{346308BA-6DF7-425B-A564-448D4EA3D376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{346308BA-6DF7-425B-A564-448D4EA3D376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{346308BA-6DF7-425B-A564-448D4EA3D376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{346308BA-6DF7-425B-A564-448D4EA3D376}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42B951DB-1C63-451C-B110-0F7244137B6A}
+	EndGlobalSection
+EndGlobal

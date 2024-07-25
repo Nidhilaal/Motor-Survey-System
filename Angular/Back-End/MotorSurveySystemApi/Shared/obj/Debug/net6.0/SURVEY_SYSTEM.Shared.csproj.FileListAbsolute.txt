@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\bin\Debug\net6.0\SURVEY_SYSTEM.Shared.deps.json
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\bin\Debug\net6.0\SURVEY_SYSTEM.Shared.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\bin\Debug\net6.0\SURVEY_SYSTEM.Shared.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\obj\Debug\net6.0\SURVEY_SYSTEM.Shared.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\obj\Debug\net6.0\SURVEY_SYSTEM.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\obj\Debug\net6.0\SURVEY_SYSTEM.Shared.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\obj\Debug\net6.0\SURVEY_SYSTEM.Shared.AssemblyInfo.cs
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\obj\Debug\net6.0\SURVEY_SYSTEM.Shared.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\obj\Debug\net6.0\SURVEY_SYSTEM.Shared.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\obj\Debug\net6.0\refint\SURVEY_SYSTEM.Shared.dll
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\obj\Debug\net6.0\SURVEY_SYSTEM.Shared.pdb
+C:\Users\user\Desktop\SURVEY_SYSTEM_APP\Shared\obj\Debug\net6.0\ref\SURVEY_SYSTEM.Shared.dll
