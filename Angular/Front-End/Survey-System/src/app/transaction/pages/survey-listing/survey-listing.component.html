@@ -1,0 +1,40 @@
+<app-surveyor-navbar></app-surveyor-navbar>
+
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div style="position: absolute; right: 2%; width: 92%; text-align: right;">
+            <button class="btn btn-dark" onclick="window.history.back()"><i class="bi bi-arrow-left-short"></i>&nbsp;Back</button>
+
+        </div>
+    </div>
+</div>
+<div style="margin-top: 3%; margin-bottom: initial" class="d-flex align-items-center justify-content-center">
+    <h4 style="font-weight: bold">Surveys</h4>
+</div>
+<ngx-datatable
+class="material"
+  [rows]="data"
+  columnMode="force"
+  [headerHeight]="55" 
+  [footerHeight]="50" 
+  [rowHeight]="'auto'"
+  [count]="count" [limit]="8" [offset]="0" (page)="setPage($event)"
+
+>
+  <ngx-datatable-column *ngIf="false" name="Survey Uid" prop="SUR_UID" ></ngx-datatable-column>
+ 
+  
+  <ngx-datatable-column name="Claim No" prop="SUR_CLM_NO"></ngx-datatable-column>
+  <ngx-datatable-column name="Survey No" prop="SUR_NO"></ngx-datatable-column>
+  <ngx-datatable-column name="Chassis Value" prop="SUR_CHASSIS_NO"></ngx-datatable-column>
+  <ngx-datatable-column name="Registration No" prop="SUR_REGN_NO"></ngx-datatable-column>
+  <ngx-datatable-column name="Engine No" prop="SUR_ENGINE_NO"></ngx-datatable-column>
+  <ngx-datatable-column name="Survey Status" prop="SUR_STATUS"></ngx-datatable-column>
+  <ngx-datatable-column name="Survey Approval" prop="SUR_APPR_STS"></ngx-datatable-column>
+  <ngx-datatable-column name="Action">
+    <ng-template ngx-datatable-cell-template let-row="row">
+      <button *ngIf="row.SUR_STATUS !== 'Submitted'" class="btn btn-warning btn-sm" (click)="editSurvey(row.SUR_UID)" >Edit</button>&nbsp;  
+    </ng-template>
+  </ngx-datatable-column>
+ 
+</ngx-datatable>

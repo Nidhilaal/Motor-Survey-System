@@ -1,0 +1,142 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div style="position: absolute; right: 2%; width: 92%; text-align: right;">           
+                <a *ngIf="isEditMode" routerLink="/transaction/motorclaim" class="btn btn-primary">Add<i class="bi bi-plus"></i></a>&nbsp;
+            <button id="btnBack" class="btn btn-dark" onclick="window.history.back()"><i class="bi bi-arrow-left-short"></i>&nbsp;Back</button>
+        </div>
+    </div>
+</div>
+
+<div style="margin-right: 10%; margin-left: 10%; margin-top: 5%; margin-bottom: initial">
+        <div *ngIf="isEditMode">
+            <h2 style="font-size: x-large; color: #10898d; font-weight: bold; display: inline-block;">Claim No: </h2>
+            <span style="font-size: large; display: inline-block; margin-left: 5px;">{{motorClaimEntity.clmNo}}</span>
+        </div>
+        <h4 *ngIf="!isEditMode">Add Claim Details</h4>
+        <form class="addMotorClaimForm" (ngSubmit)="onSubmit()" [ngModel]="motorClaimEntity" #testForm="ngForm" ngNativeValidate>
+              
+            <input type="hidden" name="mode" />
+            <div class="row mt-4 mb-4">
+                <div class="col-md-3 ">
+                    <div class="form-group">
+                        <label for="clmPolNo">Policy No</label>
+                        <input type="text"  [(ngModel)]="motorClaimEntity.clmPolNo"  name="clmPolNo"class="form-control" required="true"  maxlength="30">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="policyFromDate">Policy From</label>
+                        <input type="date" [(ngModel)]="formattedClmPolFmDt" name="clmPolFmDt" class="form-control" required="true"
+                        [max]="formattedClmPolLossDt ? formattedClmPolLossDt : (formattedClmPolIntmDt ? formattedClmPolIntmDt : getToday())"
+                        (ngModelChange)="setPolicyToDate($event)">
+          
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="policyToDate">Policy To</label>
+                        <input type="date"  [(ngModel)]="formattedClmPolToDt"name="clmPolToDt" class="form-control" readonly required="true" maxlength="240">
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="lossDate">Loss Date</label>
+                        <input type="date"  
+                        [(ngModel)]="formattedClmPolLossDt"name="clmLossDt" class="form-control" required="true" 
+                        [min]=" formattedClmPolFmDt"  
+                        [max]="formattedClmPolIntmDt ? formattedClmPolIntmDt :(getToday() > getMaxDate() ? getMaxDate() : getToday())"  maxlength="240">
+
+                    </div>
+                </div>              
+                </div>
+                <div class="row mt-4 mb-4">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="claimIntimationDate">Claim Intimation Date</label>
+                        <input type="date" 
+                        [(ngModel)]="formattedClmPolIntmDt" name="clmIntmDt" class="form-control" 
+                        [min]="formattedClmPolLossDt"  maxlength="240" [max]="getToday() > getMaxDate() ? getMaxDate() : getToday()">
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="claimRegistrationDate">Claim Registration Date</label>
+                        <input type="date" 
+                        [(ngModel)]="formattedClmRegToDt" name="clmRegDt" class="form-control" readonly  maxlength="240">
+
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="clmPolRepNo">Police Report No</label>
+                        <input type="text" [(ngModel)]="motorClaimEntity.clmPolRepNo" name="clmPolRepNo" class="form-control" maxlength="30"  [readonly]="isEditMode" (change)="checkDuplicateMotorClaim()">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="clmLossDesc">Loss Description</label>
+                        <input type="text"[(ngModel)]="motorClaimEntity.clmLossDesc" class="form-control" name="clmLossDesc" required="true" maxlength="120">
+                    </div>
+                </div>              
+            </div>
+            <div class="row mt-4 mb-5">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="clmVehChassisNo">Vehicle Chassis Number</label>
+                        <input type="text"  [(ngModel)]="motorClaimEntity.clmVehChassisNo" required="true" name="clmVehChassisNo"class="form-control" maxlength="30">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="clmVehEngineNo"> Vehicle Engine Number</label>
+                        <input type="text"  [(ngModel)]="motorClaimEntity.clmVehEngineNo" required="true" name="clmVehEngineNo"  class="form-control"  maxlength="30">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="clmVehRegnNo">Vehicle Registration No</label>
+                        <input type="text"  [(ngModel)]="motorClaimEntity.clmVehRegnNo" required="true" name="clmVehRegnNo" class="form-control"  maxlength="12">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="clmVehValue">Vehicle Value</label>
+                        <!-- <input type="text" [(ngModel)]="motorClaimEntity.clmVehValue"  required="true" name="clmVehValue" class="form-control text-end"
+                        pattern="^\d{4,7}$" title="Enter a number greater than or equal to 1000" step="0.01"> -->
+                        <!-- <input type="text" 
+                        [(ngModel)]="motorClaimEntity.clmVehValue" 
+                        required="true" 
+                        name="clmVehValue" 
+                        class="form-control text-end"
+                    > -->
+                 
+                        <input type="number"  
+                        [(ngModel)]="motorClaimEntity.clmVehValue " 
+                        class="form-control text-end" 
+                        name="clmVehValue" 
+                       min="1000"
+                       max="9999999"
+                             />
+                 
+                    </div>
+                </div>              
+            </div>
+           
+            <div class="modal-footer justify-content-center">
+                <button *ngIf="!isEditMode" type="submit" class="btn btn-success" id="btnSave"><i class="bi bi-check2-circle"></i>&nbsp;Save</button>
+                <button *ngIf="isEditMode" type="submit" class="btn btn-warning" id="btnUpdate"><i class="bi bi-check2-circle"></i>Update</button>
+                &nbsp;<button type="button" class="btn btn-danger" (click)="onReset()" id="btnReset"><i class="bi bi-arrow-clockwise"></i>&nbsp;Reset</button>
+            </div>
+        </form>
+</div>
+
+
+
+
+
+

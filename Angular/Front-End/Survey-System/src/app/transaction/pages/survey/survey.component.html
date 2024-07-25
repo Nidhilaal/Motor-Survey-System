@@ -1,0 +1,145 @@
+<app-surveyor-navbar></app-surveyor-navbar>
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div style="position: absolute; right: 2%; width: 92%; text-align: right;">         
+            <button id="btnBack" class="btn btn-dark" onclick="window.history.back()"><i class="bi bi-arrow-left-short"></i>&nbsp;Back</button>
+        </div>
+    </div>
+</div>
+<div style="margin-right: 10%; margin-left: 10%; margin-top: 3%">   
+    <div *ngIf="isEditMode">
+        <h2 style="font-size: x-large; color: #10898d; font-weight: bold; display: inline-block;">Survey No: </h2>
+        <span style="font-size: large; display: inline-block; margin-left: 5px;">{{motorClmSurHdrEntity.surNo}}</span>
+    </div>
+    <h3 *ngIf="!isEditMode">Add Survey</h3>
+   
+        <form class="addSurveyForm" (ngSubmit)="onSubmit()" [ngModel]="motorClmSurHdrEntity" #testForm="ngForm" ngNativeValidate>           
+            <input type="hidden" name="mode" />                   
+            <div class="row mt-4 mb-4">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="surclmNo">Claim No</label>
+                        <input type="text"  [(ngModel)]="motorClmSurHdrEntity.surclmNo" name="surclmNo" class="form-control" readonly  maxlength="12">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="surChassisNo"> Chassis No</label>
+                        <input type="text"  [(ngModel)]="motorClmSurHdrEntity.surChassisNo" name="surChassisNo" readonly  class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="surRegnNo">Registration No</label>
+                        <input type="text"  [(ngModel)]="motorClmSurHdrEntity.surRegnNo"name="surRegnNo" readonly class="form-control"  >
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="surEngineNo">Engine No</label>
+                        <input type="text"[(ngModel)]="motorClmSurHdrEntity.surEngineNo" name="surEngineNo" readonly class="form-control" >
+                    </div>
+                </div>              
+            </div>
+            <div class="row mt-4 mb-5">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="surCurr">Currency</label>
+                        <select [(ngModel)]="motorClmSurHdrEntity.surCurr" name="surCurr" 
+                        [disabled]="isEditMode && data.length ?  true: false" 
+                        class="form-control"required="true">
+                            <option value="" disabled selected>--Select--</option>
+                            <option *ngFor="let currency of currencies" [value]="currency.value">{{ currency.display }}</option>
+                        </select>
+                    </div>
+                </div>         
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="surFcAmt"> Amount(FC)</label>
+                        <!-- <input type="number"  [(ngModel)]="motorClmSurHdrEntity.surFcAmt" name="surFcAmt" readonly class="form-control text-end" > -->
+                        <input type="text"  
+                        [ngModel]="motorClmSurHdrEntity.surFcAmt | currency:motorClmSurHdrEntity.surCurr" 
+                        name="surFcAmt" 
+                        readonly
+                        class="form-control text-end" 
+                        (ngModelChange)="motorClmSurHdrEntity.surFcAmt=$event" 
+                        />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="surLcAmt">Amount(LC)</label>
+                        <!-- <input type="number"  [(ngModel)]="motorClmSurHdrEntity.surLcAmt"
+                         name="surLcAmt"  readonly  class="form-control text-end" > -->
+
+                        <input type="text"  
+                        [ngModel]="motorClmSurHdrEntity.surLcAmt | currency:'AED'" 
+                        name="surdLcAmt" 
+                        readonly
+                        class="form-control text-end" 
+                        (ngModelChange)="motorClmSurHdrEntity.surLcAmt=$event" 
+                        />
+                    </div>
+                </div>                       
+            </div>          
+            <div *ngIf="motorClmSurHdrEntity.surStatus !== 'S'" class="modal-footer justify-content-center mb-5">
+                <button *ngIf="!isEditMode" type="submit" class="btn btn-success" id="btnSave"><i class="bi bi-check2-circle">&nbsp;</i>Save</button>
+                <button  *ngIf="isEditMode && !data.length" type="submit" class="btn btn-warning" id="btnUpdate"><i class="bi bi-check2-circle">&nbsp;</i>Update</button>
+                <button *ngIf="isEditMode && data.length" type="submit" class="btn btn-warning" id="btnSubmit"><i class="bi bi-check2-circle">&nbsp;</i>Submit</button>
+                &nbsp;<button *ngIf="!data.length" type="button" class="btn btn-danger" id="btnReset" (click)="onReset()"><i class="bi bi-arrow-clockwise">&nbsp;</i>Reset</button>
+            </div>
+        </form>
+</div>
+
+<div  *ngIf="isEditMode" class="container ">
+    <div class="row">
+        <div class="d-flex align-items-center justify-content-center">
+            <h4>Accessories</h4>
+        </div>
+        <div style="position: absolute; right: 9.5%; width: 95%; text-align: right;">  
+            <button id="btnAddSurveyDetails" class="btn btn-primary"  (click)="openAddSurveyDetailsModal()">Add Parts</button>         
+        </div>
+    </div>
+</div>
+
+<ngx-datatable *ngIf="isEditMode" 
+class="material"
+  [rows]="data"
+  columnMode="force"
+  [headerHeight]="55" 
+  [footerHeight]="50" 
+  [rowHeight]="'auto'"
+  [count]="count" 
+  [limit]="motorClmSurHdrEntity.surStatus !== 'S' ? 2 : 3" 
+  [offset]="0" 
+  (page)="setPage($event)"
+>
+  <ngx-datatable-column *ngIf="false" name="Survey Uid" prop="SURD_UID"></ngx-datatable-column>
+  <ngx-datatable-column name="Item Code" prop="SURD_ITEM_CODE"></ngx-datatable-column>
+  <ngx-datatable-column name="Type" prop="SURD_TYPE"></ngx-datatable-column>
+  <ngx-datatable-column name="Unit Price" prop="SURD_UNIT_PRICE">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+        <span>{{ value | currency:motorClmSurHdrEntity.surCurr }}</span>
+      </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Quantity" prop="SURD_QUANTITY"></ngx-datatable-column>
+  <ngx-datatable-column name="Amount(Fc)" prop="SURD_FC_AMT">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+        <span>{{ value | currency:motorClmSurHdrEntity.surCurr }}</span>
+      </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Amount(Lc)" prop="SURD_LC_AMT">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      <span>{{ value | currency:'AED' }}</span>
+    </ng-template>
+  </ngx-datatable-column>  
+  <ngx-datatable-column *ngIf="motorClmSurHdrEntity.surStatus !== 'S'" name="Action">
+    <ng-template ngx-datatable-cell-template let-row="row">
+      <button class="btn btn-warning btn-sm" (click)="openAddSurveyDetailsModal(row)" >Edit</button>&nbsp;  
+      <button class="btn btn-danger btn-sm" (click)="deleteSurveyDetails(row.SURD_UID)">Delete</button>
+    </ng-template>
+  </ngx-datatable-column>
+ 
+</ngx-datatable>
+
+

@@ -1,0 +1,40 @@
+.ngx-datatable {
+    width: 85%; 
+    margin-left: 7.5%; 
+    margin-top: 2%; 
+  }
+  
+  .ngx-datatable .datatable-body {
+    max-height: 50%; 
+    margin-left: 0.5%;
+
+  }
+  
+  .ngx-datatable .datatable-row {
+    height: 5%; /* Adjust as needed */
+  }
+  
+  
+  .ngx-datatable .datatable-header,
+  .ngx-datatable .datatable-footer {
+    height: 6%; /* Adjust as needed */
+  }
+  
+  .ngx-datatable .datatable-body-cell {
+    font-size: 1.4vw; 
+    padding: 0.5vw; 
+    
+  }
+
+ .ngx-datatable.material {
+    .datatable-header {
+      .datatable-header-cell {
+      font-size: medium;
+    font-weight: bold;
+    margin-left: 0.5%;
+    margin-right: 1%;
+
+
+      }
+    }
+  }

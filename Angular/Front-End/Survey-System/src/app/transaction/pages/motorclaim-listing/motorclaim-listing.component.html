@@ -1,0 +1,61 @@
+<div *ngIf="userType == 'U'">
+    <app-user-navbar></app-user-navbar>
+</div>
+<div *ngIf="userType == 'S'">
+    <app-surveyor-navbar></app-surveyor-navbar>
+</div>
+
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div style="position: absolute; right: 2%; width: 92%; text-align: right;">
+            <button  *ngIf="userType == 'U'" type="button"  class="btn btn-primary" (click)="addMotorClaim()" >Add<i class="bi bi-plus"></i></button>&nbsp;
+            <button class="btn btn-dark" onclick="window.history.back()"><i class="bi bi-arrow-left-short"></i>&nbsp;Back</button>
+
+        </div>
+    </div>
+</div>
+<div style="margin-top: 3%; margin-bottom: initial" class="d-flex align-items-center justify-content-center">
+    <h4 style="font-weight: bold">MOTOR CLAIMS</h4>
+</div>
+<ngx-datatable
+class="material"
+  [rows]="data"
+  columnMode="force"
+  [headerHeight]="55" 
+  [footerHeight]="50" 
+  [rowHeight]="'auto'"
+  [count]="count" [limit]="8" [offset]="0" (page)="setPage($event)"
+
+>
+  <ngx-datatable-column *ngIf="false" name="Claim Uid" prop="CLM_UID" ></ngx-datatable-column>
+  <ngx-datatable-column name="Claim No" prop="CLM_NO"></ngx-datatable-column>
+  <ngx-datatable-column name="Policy From" prop="CLM_POL_FM_DT">
+    <ng-template ngx-datatable-cell-template let-value="value">
+      {{ value | date: 'dd/MM/yyyy' }}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Policy To" prop="CLM_POL_TO_DT">
+    <ng-template ngx-datatable-cell-template let-value="value">
+      {{ value | date: 'dd/MM/yyyy' }}
+    </ng-template>
+  </ngx-datatable-column>
+  
+  <ngx-datatable-column name="Chassis No" prop="CLM_POL_REP_NO"></ngx-datatable-column>
+  <ngx-datatable-column name="Report No" prop="CLM_VEH_CHASSIS_NO"></ngx-datatable-column>
+  <ngx-datatable-column name="Vehicle Value" prop="CLM_VEH_VALUE">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      <span>{{ value | currency:'AED' }}</span>
+    </ng-template>
+  </ngx-datatable-column>
+    <ngx-datatable-column name="Survey Created" prop="CLM_SUR_CR_YN"></ngx-datatable-column>
+  <ngx-datatable-column name="Survey Approved" prop="CLM_SUR_APPR_YN"></ngx-datatable-column>
+  <ngx-datatable-column name="Action">
+    <ng-template ngx-datatable-cell-template let-row="row">
+      <button *ngIf="userType == 'U' && row.CLM_SUR_CR_YN == 'Yes'" class="btn btn-info btn-sm" (click)="viewSurvey(row.CLM_UID)">View</button>
+      <button *ngIf="userType == 'S' && row.CLM_SUR_CR_YN == 'No'" (click)="startSurvey(row.CLM_UID)" class="btn btn-warning btn-sm" >Start survey</button>
+      <button *ngIf="userType == 'U' && row.CLM_SUR_CR_YN == 'No'" class="btn btn-warning btn-sm" (click)="addMotorClaim(row.CLM_UID)" >Edit</button> 
+      &nbsp; <button *ngIf="userType == 'U' && row.CLM_SUR_CR_YN == 'No'" class="btn btn-danger btn-sm" (click)="deleteMotorClaim(row.CLM_UID)">Delete</button>  
+    </ng-template>
+  </ngx-datatable-column>
+ 
+</ngx-datatable>

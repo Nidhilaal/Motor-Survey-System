@@ -1,0 +1,32 @@
+<form class="addErrorCodesForm" (ngSubmit)="onSubmit()" [(ngModel)]="errorMasterEntity" #testForm="ngForm" ngNativeValidate>
+    <div class="modal-header">
+        <h5 class="modal-title" name="titlename">Add Error Code</h5>
+        <button type="button" name="closeButton" class="btn-close shadow-none" aria-label="Close" (click)="closeModal()"></button>
+    </div>   
+    <div class="row mt-3 mb-4">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="errType">Type</label>
+                <input type="text"  class="form-control" [(ngModel)]="errorMasterEntity.errType" name="errType"  required="true" maxlength="12">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="errCode">Code</label>
+                <input type="text" class="form-control" [(ngModel)]="errorMasterEntity.errCode" name="errCode" required="true"
+                [readonly]="isEditMode" (input)="onErrCodeChange" maxlength="12">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="errDesc">Description</label>
+                <input type="text" class="form-control" [(ngModel)]="errorMasterEntity.errDesc" name="errDesc" maxlength="240">
+            </div>
+        </div>          
+    </div>   
+    <div class="modal-footer justify-content-end">
+        <button *ngIf="!isEditMode" type="submit" class="btn btn-success" name="btnSave"><i class="bi bi-check2-circle">&nbsp;</i>Save</button>
+        <button *ngIf="isEditMode" type="submit" class="btn btn-warning" name="btnUpdate"><i class="bi bi-check2-circle">&nbsp;</i>Update</button>
+        <button type="button" class="btn btn-danger" (click)="onReset()" name="btnReset"><i class="bi bi-arrow-clockwise">&nbsp;</i>Reset</button>
+    </div>
+</form>

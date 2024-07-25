@@ -1,0 +1,44 @@
+<form class="addUserForm" (ngSubmit)="onSubmit()" [ngModel]="userMasterEntity" #testForm="ngForm" ngNativeValidate>
+    <div class="modal-header">
+        <h5 class="modal-title">Add User</h5>
+        <button type="button" class="btn-close shadow-none" aria-label="Close" (click)="closeModal()"></button>
+    </div>   
+    <input type="hidden" name="mode" />
+    <div class="row mt-3 mb-4">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="userId">Type</label>
+                <input type="text"  [(ngModel)]="userMasterEntity.userId" name="userId"class="form-control" (change)="onUserIdChange()" required maxlength="12">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="userName">User Name</label>
+                <input type="text"  [(ngModel)]="userMasterEntity.userName" name="userName" required="true" class="form-control" required maxlength="12">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="userPassword">Password</label>
+                <input type="text"  [(ngModel)]="userMasterEntity.userPassword" name="userPassword" required="true" class="form-control" maxlength="12">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="userType">Type</label>
+                <select [(ngModel)]="userMasterEntity.userType" name="userType" required class="form-control">
+                    <option value="" disabled selected>--Select--</option>
+                   <option value="S">S-Surveyor</option>
+                    <option value="U">U-User</option>
+                </select>
+            </div>
+        </div>     
+    </div>
+   
+   
+    <div class="modal-footer justify-content-end">
+        <button *ngIf="!isEditMode" type="submit" class="btn btn-success" id="btnSave"><i class="bi bi-check2-circle">&nbsp;</i>Save</button>
+        <button *ngIf="isEditMode" type="submit" class="btn btn-warning" id="btnUdpate"><i class="bi bi-check2-circle">&nbsp;</i>Update</button>
+        <button type="button" class="btn btn-danger" (click)="onReset()" id="btnReset" ><i class="bi bi-arrow-clockwise">&nbsp;</i>Reset</button>
+    </div>
+</form>

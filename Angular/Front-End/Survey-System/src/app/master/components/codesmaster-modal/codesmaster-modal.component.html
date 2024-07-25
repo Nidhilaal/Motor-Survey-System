@@ -1,0 +1,47 @@
+<form class="addCodesForm" (ngSubmit)="onSubmit()" [ngModel]="codesMasterEntity" #testForm="ngForm" ngNativeValidate>
+    <div class="modal-header">
+        <h5 class="modal-title" name="titleO">Add Code</h5>
+        <button type="button" class="btn-close shadow-none" name="closeButton" aria-label="Close" (click)="closeModal()"></button>
+    </div>   
+    <div class="row mt-3 mb-4">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="CmType">Type</label>
+                <input type="text"  [(ngModel)]="codesMasterEntity.cmType" name="CmType"class="form-control" [readonly]="isEditMode? true : null" (change)="checkDuplicateCodesMaster($event)"  required maxlength="12">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="CmCode">Code</label>
+                <input type="text"  [(ngModel)]="codesMasterEntity.cmCode" name="CmCode"  class="form-control" [readonly]="isEditMode ? true : null" (change)="checkDuplicateCodesMaster($event)" required maxlength="12">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="CmDesc">Description</label>
+                <input type="text"  [(ngModel)]="codesMasterEntity.cmDesc" name="CmDesc" class="form-control"  maxlength="240">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="CmValue">Value</label>
+                <input type="number"[(ngModel)]="codesMasterEntity.cmValue" name="CmValue" class="form-control text-end"
+                min="0" max="9999999"step="0.01">
+            </div>
+        </div>              
+    </div>
+    <div class="row mt-3 mb-4">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="cmActiveYn">Active</label>&nbsp;
+                <input type="checkbox" [(ngModel)]="cmActiveCheckbox" name="cmActiveYn" class="form-check-input"  >
+            </div>
+        </div>
+    </div>
+   
+    <div class="modal-footer justify-content-end">
+        <button *ngIf="!isEditMode"  type="submit" class="btn btn-success" name="btnSave"><i class="bi bi-check2-circle">&nbsp;</i>Save</button>
+        <button *ngIf="isEditMode" type="submit" class="btn btn-warning" name="btnUpdate"><i class="bi bi-check2-circle">&nbsp;</i>Update</button>
+  <button type="button" class="btn btn-danger" (click)="onReset()" name="btnReset" ><i class="bi bi-arrow-clockwise">&nbsp;</i>Reset</button>
+    </div>
+</form>

@@ -1,0 +1,15 @@
+.addErrorCodesForm {
+    margin: 3% 3% 3% 3%;
+}
+/* codesmaster-modal.component.css */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
+}
+

@@ -1,0 +1,127 @@
+<app-user-navbar></app-user-navbar>
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div class="col-1" style="margin-left: 99.9%; margin-right: 2%">
+            <button id="btnBack" class="btn btn-dark" onclick="window.history.back()"><i class="bi bi-arrow-left-short"></i>&nbsp;Back</button>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <h4 style="font-weight: bold">SUMMARY</h4>
+        </div>
+    </div>
+</div>
+<div style="margin-right: 15%; margin-left: 20%; margin-top: 2%; margin-bottom: 3%">
+    <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom: 1%;">
+        <div class="col-sm-3">
+            <label for="clmPolNo" style="font-size: large;">Policy No: </label>
+        </div>
+        <div class="col-sm-3">
+            <span style="font-weight: bold;">{{ motorClaimEntity.clmPolNo }}</span>
+        </div>
+        <div class="col-sm-3">
+            <label for="surclmNo" style="font-size: large;">Claim No:</label>
+        </div>
+        <div class="col-sm-3">
+            <span style="font-weight: bold;">{{ motorClmSurHdrEntity.surclmNo }}</span>
+        </div>
+    </div>
+    <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 1%; margin-bottom: 1%;">
+        <div class="col-sm-3">
+            <label for="surNo" style="font-size: large;">Survey No: </label>
+        </div>
+        <div class="col-sm-3">
+            <span style="font-weight: bold;">{{ motorClmSurHdrEntity.surNo }}</span>
+        </div>
+        <div class="col-sm-3">
+            <label for="surChassisNo" style="font-size: large;">Chassis No:</label>
+        </div>
+        <div class="col-sm-3">
+            <span style="font-weight: bold;">{{ motorClmSurHdrEntity.surChassisNo }}</span>
+        </div>
+    </div>
+    
+    <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 1%; margin-bottom: 1%;">
+        <div class="col-sm-3">
+            <label for="surRegnNo" style="font-size: large;">Registration No: </label>
+        </div>
+        <div class="col-sm-3">
+            <span style="font-weight: bold;">{{ motorClmSurHdrEntity.surRegnNo }}</span>
+        </div>
+        <div class="col-sm-3">
+            <label for="surEngineNo" style="font-size: large;">Engine No: </label>
+        </div>
+        <div class="col-sm-3">
+            <span style="font-weight: bold;">{{ motorClmSurHdrEntity.surEngineNo }}</span>
+        </div>
+    </div>
+    
+    <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 1%; margin-bottom: 1%;">
+        <div class="col-sm-3">
+            <label for="surCurr" style="font-size: large;">Currency:</label>
+        </div>
+        <div class="col-sm-3">
+            <span style="font-weight: bold;">{{ motorClmSurHdrEntity.surCurr }}</span>
+        </div>
+        <div class="col-sm-3">
+            <label for="surFcAmt" style="font-size: large;">Amount(FC): </label>
+        </div>
+        <div class="col-sm-3">
+            <span style="font-weight: bold;">{{ motorClmSurHdrEntity.surFcAmt }}</span>
+        </div>
+    </div>
+    
+    <div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 1%; margin-bottom: 1%;">
+        <div class="col-sm-3">
+            <label for="surLcAmt" style="font-size: large;">Amount(LC):  </label>
+        </div>
+        <div class="col-sm-3">
+            <span style="font-weight: bold;">{{ motorClmSurHdrEntity.surLcAmt }}</span>
+        </div>
+        <div class="col-sm-3">
+            <label for="lbSurApprSts" style="font-size: large;">Status: </label>
+        </div>
+        <div class="col-sm-3">
+            <span style="font-weight: bold;">{{ motorClmSurHdrEntity.surApprSts }}</span>
+        </div>
+    </div>
+    
+</div>
+
+<div class="container">
+    <div class="row" style="margin-top: 4%; margin-bottom: 2%">
+        <div class="d-flex align-items-center justify-content-center">
+            <h4>Spare Parts & Accessories</h4>
+        </div>
+    </div>
+</div>
+<ngx-datatable 
+class="material"
+  [rows]="data"
+  columnMode="force"
+  [headerHeight]="55" 
+  [footerHeight]="50" 
+  [rowHeight]="'auto'"
+  [count]="count" 
+  [limit]="motorClmSurHdrEntity.surStatus !== 'S' ? 2 : 3" 
+  [offset]="0" 
+  (page)="setPage($event)"
+>
+  <ngx-datatable-column *ngIf="false" name="Survey Uid" prop="SURD_UID"></ngx-datatable-column>
+  <ngx-datatable-column name="Item Code" prop="SURD_ITEM_CODE"></ngx-datatable-column>
+  <ngx-datatable-column name="Type" prop="SURD_TYPE"></ngx-datatable-column>
+  <ngx-datatable-column name="Unit Price" prop="SURD_UNIT_PRICE"></ngx-datatable-column>
+  <ngx-datatable-column name="Quantity" prop="SURD_QUANTITY"></ngx-datatable-column>
+  <ngx-datatable-column name="Amount(Fc)" prop="SURD_FC_AMT"></ngx-datatable-column>
+  <ngx-datatable-column name="Amount(Lc)" prop="SURD_LC_AMT"></ngx-datatable-column>
+ 
+ 
+</ngx-datatable>
+<div  class="mt-4">
+    <div class="d-flex align-items-center justify-content-center">     
+
+        <button *ngIf="motorClmSurHdrEntity.surApprSts === 'Not Approved'" type="button" (click)="handleApproval('A')" class="btn btn-success">Approve</button>&nbsp;
+        <button *ngIf="motorClmSurHdrEntity.surApprSts === 'Not Approved'" type="button" (click)="handleApproval('R')" class="btn btn-danger" >Reject</button>
+        
+        <a *ngIf="motorClmSurHdrEntity.surApprSts !== 'Not Approved'" href="http://192.168.1.220:75/Report/ReportPage?SUR_UID=@Model.motorClmSurHdr.SurUid" class="btn btn-warning">Print</a>
+
+    </div>
+</div>

@@ -1,0 +1,47 @@
+/* Adjust the width of the ngx-datatable */
+.ngx-datatable {
+    width: 85%; /* Adjust as needed */
+    margin-left: 7.5%; /* Add left margin */
+    margin-top: 2%; /* Add top margin */
+  }
+  
+  /* Adjust the height of the ngx-datatable */
+  .ngx-datatable .datatable-body {
+    max-height: 50%; /* Adjust as needed */
+    margin-left: 1%;
+  }
+  
+  /* Adjust the height of the table rows */
+  .ngx-datatable .datatable-row {
+    height: 5%; /* Adjust as needed */
+  }
+  
+  /* Adjust the height of the header and footer */
+  
+  .ngx-datatable .datatable-header,
+  .ngx-datatable .datatable-footer {
+    height: 6%; /* Adjust as needed */
+  }
+  
+  /* Adjust the font size and padding of the table cells */
+  .ngx-datatable .datatable-body-cell {
+    font-size: 1.4vw; 
+    padding: 0.5vw; 
+
+    
+  }
+
+  .ngx-datatable.material {
+    .datatable-header {
+      .datatable-header-cell {
+      font-size: medium;
+    font-weight: bold;
+    margin-left: 1%;
+      }
+    }
+  }
+  .ngx-datatable .datatable-body-cell {
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow text */
+}

@@ -1,0 +1,27 @@
+<form (ngSubmit)="login()" [ngModel]="userMaster" #testForm="ngForm" ngNativeValidate>
+  <div class="vh-100" style="background-image: url('/assets/images/Login-Background.jpg'); background-size: cover">
+    <div class="container py-5 h-100">
+      <svg viewBox="0 10 900 100">
+        <text x="45%" y="50%" dy=".35em" text-anchor="middle">MOTOR SURVEY SYSTEM</text>
+      </svg>
+      <div class="row d-flex justify-content-center align-items-center h-100" style="margin-top:2%;">
+        <div class="col-12 col-md-8 col-lg-4 col-xl-4">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+              <h3 class="mb-4">Login</h3>
+              <div class="form-outline mb-3">
+                <label for="userId">User Id</label>
+                <input type="text" id="userId" [(ngModel)]="userMaster.userId" name="userId" required="true"  class="form-control">
+              </div>
+              <div class="form-outline mb-4">
+                <label for="password">Password</label>
+                <input type="password" id="userPassword" [(ngModel)]="userMaster.userPassword" required="true"  name="userPassword" class="form-control">
+              </div>
+              <button type="submit" id="btnLogin" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

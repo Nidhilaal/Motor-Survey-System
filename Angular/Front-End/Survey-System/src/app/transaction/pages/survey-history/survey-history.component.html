@@ -1,0 +1,43 @@
+<app-user-navbar></app-user-navbar>
+<div class="container">
+    <div class="row" style="margin-top: 1%; margin-bottom: 1%">
+        <div style="position: absolute; right: 2%; width: 95%; text-align: right;">
+            <button class="btn btn-dark" onclick="window.history.back()"><i class="bi bi-arrow-left-short"></i>&nbsp;Back</button>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 3%; margin-bottom: initial" class="d-flex align-items-center justify-content-center">
+    <h4 style="font-weight: bold">Survey History</h4>
+</div>
+<ngx-datatable
+class="material"
+  [rows]="data"
+  columnMode="force"
+  [headerHeight]="55" 
+  [footerHeight]="50" 
+  [rowHeight]="'auto'"
+  [count]="count" [limit]="8" [offset]="0" (page)="setPage($event)"
+
+>
+ <ngx-datatable-column name="Claim No" prop="CLM_NO"></ngx-datatable-column>
+ <ngx-datatable-column name="Survey No" prop="SUR_NO"></ngx-datatable-column>
+  <ngx-datatable-column name="Srl No" prop="SURDH_SRL"></ngx-datatable-column>
+  <ngx-datatable-column name="Action" prop="SURDH_ACTION"></ngx-datatable-column>
+  <ngx-datatable-column name="Item Code" prop="SURDH_ITEM_CODE"></ngx-datatable-column>
+  <ngx-datatable-column name="Currency" prop="SUR_CURR"></ngx-datatable-column>
+  <ngx-datatable-column name="Quantity" prop="SURDH_QUANTITY"></ngx-datatable-column>
+  <ngx-datatable-column name="Type" prop="SURDH_TYPE"></ngx-datatable-column>
+  <ngx-datatable-column name="Unit Price" prop="SURDH_UNIT_PRICE">
+    <ng-template  let-row="row" let-value="value" ngx-datatable-cell-template>
+      <span>{{ value | currency:row.SUR_CURR }}</span>
+    </ng-template>
+  </ngx-datatable-column>
+    
+  <ngx-datatable-column name="Amount(Fc)" prop="SURDH_FC_AMT">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      <span>{{ value | currency:'AED' }}</span>
+    </ng-template>
+  </ngx-datatable-column>
+
+</ngx-datatable>
+
