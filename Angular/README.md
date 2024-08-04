@@ -93,10 +93,6 @@ The Motor Survey System is designed to manage motor insurance claims efficiently
    - Conduct the survey and fill in the survey report.
    - Submit the survey report.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file for details.
-
 ## Contact
 
-For any inquiries or issues, please contact [your-email@example.com](mailto:your-email@example.com).
+For any inquiries or issues, please contact [Nidhilal](mailto:msnidhilal16@gmail.com).
