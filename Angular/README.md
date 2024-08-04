@@ -8,7 +8,7 @@ The Motor Survey System is designed to manage motor insurance claims efficiently
 
 ## Technologies Used
 
-- **Frontend**: Angular
+- **Frontend**: Angular 17
 - **Backend**: .NET Core API
 - **Database**: Oracle Database
 
