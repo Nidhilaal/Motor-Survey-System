@@ -70,7 +70,7 @@ The Angular version uses Angular for the frontend, with the backend implemented 
 
 ## Installation
 
-Refer to the individual README files in each implementation folder for installation instructions.
+Refer to the individual README files in each implementation folder for installation instructions. Review the source and add neccessary values to the database inorder to load the error messages and fill the dropdowns since the application avoids hardcoding strictly.
 
 ## Usage
 
